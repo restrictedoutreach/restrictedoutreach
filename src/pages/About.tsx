@@ -29,13 +29,13 @@ const About = () => {
     "@type": "AboutPage",
     "name": "About RESTRICTED OUTREACH",
     "description": "Learn about RESTRICTED OUTREACH, Spain's first certified Plane partner.",
-    "url": "https://www.palantircode.com/about",
+    "url": "https://www.restrictedoutreach.com/about",
     "mainEntity": { "@type": "Organization", "name": "RESTRICTED OUTREACH", "foundingDate": "2023", "description": "Spain's first certified Plane partner" }
   };
 
   return (
     <Layout>
-      <SEO title="About Us – Spain's First Certified Plane Partner" description="Meet RESTRICTED OUTREACH, Spain's first certified Plane partner. We deliver expert implementation, migration, and consulting for Plane's unified workspace with bilingual EN/ES support." canonical="/about" jsonLd={aboutJsonLd} />
+      <SEO title="About Us" description="Meet RESTRICTED OUTREACH, Spain's first certified Plane partner: expert Plane implementation, migration and consulting with EN/ES support." canonical="/about" jsonLd={aboutJsonLd} />
       
       <section className="relative bg-gradient-to-b from-primary/5 via-background to-background py-20 overflow-hidden">
         <MatrixRain columnCount={20} opacity={0.25} />

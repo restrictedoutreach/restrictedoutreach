@@ -60,7 +60,7 @@ const JiraVsPlane = () => {
     "@type": "WebPage",
     "name": "Jira vs Plane — Why Teams Switch | RESTRICTED OUTREACH",
     "description": t("jiraVsPlane.hero.subtitle"),
-    "url": "https://www.palantircode.com/jira-vs-plane",
+    "url": "https://www.restrictedoutreach.com/jira-vs-plane",
   };
 
   return (

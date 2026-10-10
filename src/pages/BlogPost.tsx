@@ -40,7 +40,17 @@ const BlogPost = () => {
 
   return (
     <Layout>
-      <SEO title={post.title} description={post.excerpt} canonical={`/blog/${post.slug}`} type="article" />
+      <SEO title={post.title} description={post.excerpt} canonical={`/blog/${post.slug}`} type="article" jsonLd={{
+        "@context": "https://schema.org",
+        "@type": "Article",
+        headline: post.title,
+        description: post.excerpt,
+        datePublished: post.date,
+        author: { "@type": "Person", name: post.author },
+        publisher: { "@type": "Organization", name: "RESTRICTED OUTREACH" },
+        image: `https://www.restrictedoutreach.com${coverImages[post.image] ?? "/og-image.png"}`,
+        mainEntityOfPage: `https://www.restrictedoutreach.com/blog/${post.slug}`,
+      }} />
 
       <article className="py-16 lg:py-24">
         <div className="container mx-auto px-4 lg:px-8 max-w-3xl">

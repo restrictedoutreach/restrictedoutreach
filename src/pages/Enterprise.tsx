@@ -121,7 +121,7 @@ const Enterprise = () => {
     "@type": "WebPage",
     "name": "Plane Enterprise - RESTRICTED OUTREACH",
     "description": t("enterprise.meta.description"),
-    "url": "https://www.palantircode.com/enterprise",
+    "url": "https://www.restrictedoutreach.com/enterprise",
   };
 
   return (

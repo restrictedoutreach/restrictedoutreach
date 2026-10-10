@@ -30,7 +30,7 @@ const lovableJsonLd = {
   name: "Lovable & Vibe Coding Experts | RESTRICTED OUTREACH",
   description:
     "Expert Lovable developers and vibe coding specialists. Build production-ready web apps with AI-powered development. RESTRICTED OUTREACH.",
-  url: "https://www.palantircode.com/experts/lovable",
+  url: "https://www.restrictedoutreach.com/experts/lovable",
 };
 
 const stats = [

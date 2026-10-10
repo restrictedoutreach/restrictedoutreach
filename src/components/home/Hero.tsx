@@ -83,7 +83,7 @@ const Hero = () => {
                 <span className="relative inline-flex h-2 w-2 rounded-full bg-primary" />
               </span>
               <span>{t("hero.badge")}</span>
-              <img src={planeLogo} alt="Plane" className="h-5 w-auto terminal-logo-bright" />
+              <img src={planeLogo} alt="Plane logo" className="h-5 w-auto terminal-logo-bright" />
             </motion.div>
 
             <h1 className="mb-6 text-4xl font-bold tracking-tight text-foreground sm:text-5xl lg:text-6xl min-h-[1.2em]">

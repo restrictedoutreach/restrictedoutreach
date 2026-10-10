@@ -17,7 +17,7 @@ const planeJsonLd = {
   "@type": "WebPage",
   "name": "Plane - Project Management Platform | RESTRICTED OUTREACH",
   "description": "Discover Plane: the unified workspace for projects, docs, and analytics. Expert implementation by RESTRICTED OUTREACH.",
-  "url": "https://www.palantircode.com/partners/plane",
+  "url": "https://www.restrictedoutreach.com/partners/plane",
 };
 
 const PlanePage = () => {

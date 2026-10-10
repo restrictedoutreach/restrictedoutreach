@@ -265,7 +265,7 @@
   "servicesPage": {
     "title": "Expert Consulting Services",
     "heroDesc": "From migration to managed services, we provide comprehensive support for your project management journey. Our certified experts ensure your success every step of the way.",
-    "learnMore": "Learn more",
+    "learnMore": "Learn more about this service",
     "whatsIncluded": "What's Included",
     "ourProcess": "Our Process",
     "getStartedWith": "Get Started with {{service}}",
