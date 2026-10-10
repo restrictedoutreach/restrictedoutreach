@@ -28,7 +28,7 @@ const outsystemsJsonLd = {
   name: "OutSystems - AI-Powered Low-Code Platform | RESTRICTED OUTREACH",
   description:
     "OutSystems: AI-powered low-code development platform for enterprise applications. Expert implementation by RESTRICTED OUTREACH.",
-  url: "https://www.palantircode.com/experts/outsystems",
+  url: "https://www.restrictedoutreach.com/experts/outsystems",
 };
 
 const stats = [

@@ -1,104 +1,125 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://www.palantircode.com/</loc>
+    <loc>https://www.restrictedoutreach.com/</loc>
     <lastmod>2026-03-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://www.palantircode.com/enterprise</loc>
+    <loc>https://www.restrictedoutreach.com/enterprise</loc>
     <lastmod>2026-03-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.palantircode.com/services</loc>
+    <loc>https://www.restrictedoutreach.com/services</loc>
     <lastmod>2026-03-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.palantircode.com/services/migration</loc>
+    <loc>https://www.restrictedoutreach.com/services/migration</loc>
     <lastmod>2026-03-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.palantircode.com/services/implementation</loc>
+    <loc>https://www.restrictedoutreach.com/services/implementation</loc>
     <lastmod>2026-03-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.palantircode.com/services/development</loc>
+    <loc>https://www.restrictedoutreach.com/services/development</loc>
     <lastmod>2026-03-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.palantircode.com/services/managed</loc>
+    <loc>https://www.restrictedoutreach.com/services/managed</loc>
     <lastmod>2026-03-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+  </url>
   <url>
-    <loc>https://www.palantircode.com/solutions</loc>
+    <loc>https://www.restrictedoutreach.com/solutions</loc>
     <lastmod>2026-03-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.palantircode.com/about</loc>
+    <loc>https://www.restrictedoutreach.com/about</loc>
     <lastmod>2026-03-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.palantircode.com/contact</loc>
+    <loc>https://www.restrictedoutreach.com/contact</loc>
     <lastmod>2026-03-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.palantircode.com/blog</loc>
+    <loc>https://www.restrictedoutreach.com/blog</loc>
     <lastmod>2026-03-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.palantircode.com/blog/why-migrate-from-jira-to-plane</loc>
+    <loc>https://www.restrictedoutreach.com/blog/why-migrate-from-jira-to-plane</loc>
     <lastmod>2026-03-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.palantircode.com/blog/plane-compose-guide</loc>
+    <loc>https://www.restrictedoutreach.com/blog/plane-compose-guide</loc>
     <lastmod>2026-03-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.palantircode.com/blog/best-practices-plane-implementation</loc>
+    <loc>https://www.restrictedoutreach.com/blog/best-practices-plane-implementation</loc>
     <lastmod>2026-03-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.palantircode.com/privacy</loc>
+    <loc>https://www.restrictedoutreach.com/privacy</loc>
     <lastmod>2026-03-08</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://www.palantircode.com/terms</loc>
+    <loc>https://www.restrictedoutreach.com/terms</loc>
     <lastmod>2026-03-08</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://www.palantircode.com/cookies</loc>
+    <loc>https://www.restrictedoutreach.com/cookies</loc>
     <lastmod>2026-03-08</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://www.restrictedoutreach.com/jira-vs-plane</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.restrictedoutreach.com/partners/plane</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.restrictedoutreach.com/experts/outsystems</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.restrictedoutreach.com/experts/lovable</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
 </urlset>

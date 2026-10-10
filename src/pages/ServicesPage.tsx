@@ -35,10 +35,10 @@ const servicesJsonLd = {
   "@type": "Service",
   "name": "Enterprise Project Management Consulting Services",
   "serviceType": ["Software Implementation", "Migration Services", "Custom Development", "Managed Services"],
-  "provider": { "@type": "Organization", "name": "RESTRICTED OUTREACH", "url": "https://www.palantircode.com" },
+  "provider": { "@type": "Organization", "name": "RESTRICTED OUTREACH", "url": "https://www.restrictedoutreach.com" },
   "areaServed": { "@type": "Country", "name": "Spain" },
   "description": "Expert implementation, migration, custom development, and 24/7 managed services for enterprise project management.",
-  "url": "https://www.palantircode.com/services"
+  "url": "https://www.restrictedoutreach.com/services"
 };
 
 const ServicesPage = () => {

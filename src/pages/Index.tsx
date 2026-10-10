@@ -17,7 +17,7 @@ const homeJsonLd = {
   "@type": "WebPage",
   "name": "RESTRICTED OUTREACH - Spain's First Certified Plane Partner",
   "description": "Expert Plane implementation, migration, and custom solutions for Plane's unified workspace.",
-  "url": "https://www.palantircode.com/",
+  "url": "https://www.restrictedoutreach.com/",
   "mainEntity": {
     "@type": "Organization",
     "name": "RESTRICTED OUTREACH",

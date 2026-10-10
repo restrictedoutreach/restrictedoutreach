@@ -1,0 +1,25 @@
+# RESTRICTED OUTREACH
+
+> Technology consulting from Spain's first certified Plane partner: Plane implementation, Jira-to-Plane migration, custom development, managed services, and Lovable / vibe coding expertise.
+
+## Pages
+
+- [Home](https://www.restrictedoutreach.com/): Overview of our Plane services and partners.
+- [Enterprise](https://www.restrictedoutreach.com/enterprise): Plane for large organizations.
+- [Services](https://www.restrictedoutreach.com/services): All consulting services.
+- [Migration](https://www.restrictedoutreach.com/services/migration): Move from Jira and other tools to Plane.
+- [Implementation](https://www.restrictedoutreach.com/services/implementation): Plane setup and rollout.
+- [Development](https://www.restrictedoutreach.com/services/development): Custom integrations and development.
+- [Managed](https://www.restrictedoutreach.com/services/managed): Ongoing managed services.
+- [Solutions](https://www.restrictedoutreach.com/solutions): Plane solutions per team.
+- [Jira vs Plane](https://www.restrictedoutreach.com/jira-vs-plane): Feature comparison.
+- [Plane](https://www.restrictedoutreach.com/partners/plane): About the Plane platform.
+- [OutSystems experts](https://www.restrictedoutreach.com/experts/outsystems): Low-code expertise.
+- [Lovable experts](https://www.restrictedoutreach.com/experts/lovable): Lovable and vibe coding expertise.
+- [About](https://www.restrictedoutreach.com/about): Who we are.
+- [Contact](https://www.restrictedoutreach.com/contact): Get in touch.
+
+## Blog
+
+- [Blog](https://www.restrictedoutreach.com/blog): Plane tips and guides.
+- [Why migrate from Jira to Plane](https://www.restrictedoutreach.com/blog/why-migrate-from-jira-to-plane)

@@ -13,4 +13,4 @@ Allow: /
 User-agent: *
 Allow: /
 
-Sitemap: https://www.palantircode.com/sitemap.xml
+Sitemap: https://www.restrictedoutreach.com/sitemap.xml

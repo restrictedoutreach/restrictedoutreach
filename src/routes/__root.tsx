@@ -26,8 +26,8 @@ const organizationJsonLd = {
   name: "RESTRICTED OUTREACH",
   description:
     "Spain's first certified Plane partner. Expert implementation, migration, and custom solutions.",
-  url: "https://www.palantircode.com",
-  logo: "https://www.palantircode.com/favicon.png",
+  url: "https://www.restrictedoutreach.com",
+  logo: "https://www.restrictedoutreach.com/favicon.png",
   sameAs: [],
   address: {
     "@type": "PostalAddress",
@@ -40,10 +40,10 @@ const websiteJsonLd = {
   "@context": "https://schema.org",
   "@type": "WebSite",
   name: "RESTRICTED OUTREACH",
-  url: "https://www.palantircode.com",
+  url: "https://www.restrictedoutreach.com",
   potentialAction: {
     "@type": "SearchAction",
-    target: "https://www.palantircode.com/?q={search_term_string}",
+    target: "https://www.restrictedoutreach.com/?q={search_term_string}",
     "query-input": "required name=search_term_string",
   },
 };
@@ -53,7 +53,7 @@ const professionalServiceJsonLd = {
   "@type": "ProfessionalService",
   name: "RESTRICTED OUTREACH",
   description: "Expert Plane implementation, migration, and consulting services",
-  url: "https://www.palantircode.com",
+  url: "https://www.restrictedoutreach.com",
   priceRange: "$$",
   areaServed: { "@type": "Country", name: "Spain" },
   serviceType: [

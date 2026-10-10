@@ -14,7 +14,7 @@ import { useToast } from "@/hooks/use-toast";
 const contactJsonLd = {
   "@context": "https://schema.org", "@type": "ContactPage",
   "name": "Contact RESTRICTED OUTREACH",
-  "url": "https://www.palantircode.com/contact",
+  "url": "https://www.restrictedoutreach.com/contact",
   "mainEntity": { "@type": "Organization", "name": "RESTRICTED OUTREACH", "email": "hello@palantircode.com", "contactPoint": { "@type": "ContactPoint", "contactType": "sales", "availableLanguage": ["English", "Spanish"] } }
 };
 

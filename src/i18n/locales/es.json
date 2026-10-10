@@ -265,7 +265,7 @@
   "servicesPage": {
     "title": "Servicios de Consultoría Experta",
     "heroDesc": "Desde migración hasta servicios gestionados, proporcionamos soporte integral para tu gestión de proyectos. Nuestros expertos certificados aseguran tu éxito en cada paso.",
-    "learnMore": "Saber más",
+    "learnMore": "Más sobre este servicio",
     "whatsIncluded": "Qué Incluye",
     "ourProcess": "Nuestro Proceso",
     "getStartedWith": "Comenzar con {{service}}",
