@@ -41,6 +41,7 @@
     <lastmod>2026-03-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+  </url>
   <url>
     <loc>https://www.restrictedoutreach.com/solutions</loc>
     <lastmod>2026-03-08</lastmod>
@@ -100,5 +101,25 @@
     <lastmod>2026-03-08</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://www.restrictedoutreach.com/jira-vs-plane</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.restrictedoutreach.com/partners/plane</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.restrictedoutreach.com/experts/outsystems</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.restrictedoutreach.com/experts/lovable</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
 </urlset>
