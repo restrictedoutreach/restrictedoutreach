@@ -86,7 +86,7 @@ Deno.serve(async (req) => {
     }
 
     for (const msg of messages) {
-      if (!msg.role || !msg.content || typeof msg.content !== "string" || msg.content.length > 4000) {
+      if (!msg || (msg.role !== "user" && msg.role !== "assistant") || !msg.content || typeof msg.content !== "string" || msg.content.length > 4000) {
         return new Response(JSON.stringify({ error: "Invalid message format" }), {
           status: 400,
           headers: { ...corsHeaders, "Content-Type": "application/json" },
@@ -107,7 +107,7 @@ Deno.serve(async (req) => {
         model: "google/gemini-3-flash-preview",
         messages: [
           { role: "system", content: SYSTEM_PROMPT },
-          ...messages,
+          ...messages.map((m: { role: string; content: string }) => ({ role: m.role, content: m.content })),
         ],
         stream: true,
       }),
