@@ -1,4 +1,4 @@
-import { Link } from "@tanstack/react-router";
+import { Link } from "@/components/LocalizedLink";
 import { Linkedin, Mail, ArrowUpRight } from "lucide-react";
 import brand from "@/assets/restricted-outreach-brand.png";
 import { COMPANY } from "@/lib/constants";

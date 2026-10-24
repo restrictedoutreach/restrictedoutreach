@@ -7,7 +7,7 @@ import {
   Workflow,
   Users,
 } from "lucide-react";
-import { Link } from "@tanstack/react-router";
+import { Link } from "@/components/LocalizedLink";
 import { Button } from "@/components/ui/button";
 import { useCommercial } from "@/lib/commercial";
 import systems from "@/assets/agent-systems-workspace.jpg";

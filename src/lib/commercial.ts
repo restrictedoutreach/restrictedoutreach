@@ -1,11 +1,13 @@
 import { useTranslation } from "react-i18next";
+import { useLocation } from "@tanstack/react-router";
+import { pathLanguage } from "./localized-seo";
 export type Language = "es" | "ca" | "en";
 export const choose = (lang: string, es: string, ca: string, en: string) =>
   lang.startsWith("es") ? es : lang.startsWith("ca") ? ca : en;
 export function useCommercial() {
-  const { i18n } = useTranslation();
+  const pathname = useLocation({ select: (location) => location.pathname });
   return (es: string, ca: string, en: string) =>
-    choose(i18n.language, es, ca, en);
+    choose(pathLanguage(pathname), es, ca, en);
 }
 export const publicPages = [
   "/",
@@ -32,6 +34,7 @@ export function commercialHead(
       { property: "og:title", content: `${title} | RESTRICTED OUTREACH` },
       { property: "og:description", content: description },
       { property: "og:type", content: "website" },
+      { property: "og:url", content: `https://www.restrictedoutreach.com${path}` },
       { name: "twitter:card", content: "summary_large_image" },
       ...(noindex ? [{ name: "robots", content: "noindex, follow" }] : []),
     ],

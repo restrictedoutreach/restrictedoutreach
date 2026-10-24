@@ -3,6 +3,7 @@ import { initReactI18next } from 'react-i18next';
 import en from './locales/en.json';
 import es from './locales/es.json';
 import ca from './locales/ca.json';
+export const resources = { en: { translation: en }, es: { translation: es }, ca: { translation: ca } };
 
 export const getDefaultLanguage = (): string => {
   if (typeof window === 'undefined') return 'en';
@@ -20,7 +21,7 @@ export const getDefaultLanguage = (): string => {
 };
 
 i18n.use(initReactI18next).init({
-  resources: { en: { translation: en }, es: { translation: es }, ca: { translation: ca } },
+  resources,
   // Server and first client render must agree; the detected language is
   // applied after hydration (see __root.tsx).
   lng: 'en',
