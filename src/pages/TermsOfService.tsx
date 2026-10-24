@@ -1,11 +1,9 @@
 import Layout from "@/components/layout/Layout";
-import SEO from "@/components/SEO";
 import { motion } from "framer-motion";
 
 export default function TermsOfService() {
   return (
     <Layout>
-      <SEO title="Terms of Service" description="Terms of Service for RESTRICTED OUTREACH. Read our terms governing access to and use of our AI strategy and development services." canonical="/terms" noindex={false} />
       <section className="py-20">
         <div className="container max-w-4xl">
           <motion.div

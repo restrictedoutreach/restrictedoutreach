@@ -10,6 +10,7 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as LangRouteImport } from './routes/$lang'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as CookiesRouteImport } from './routes/cookies'
@@ -21,6 +22,8 @@ import { Route as PrivacyRouteImport } from './routes/privacy'
 import { Route as SolutionsRouteImport } from './routes/solutions'
 import { Route as StrategyRouteImport } from './routes/strategy'
 import { Route as TermsRouteImport } from './routes/terms'
+import { Route as LangIndexRouteImport } from './routes/$lang/index'
+import { Route as LangSplatRouteImport } from './routes/$lang/$'
 import { Route as BlogIndexRouteImport } from './routes/blog/index'
 import { Route as BlogSlugRouteImport } from './routes/blog/$slug'
 import { Route as ExpertsLovableRouteImport } from './routes/experts/lovable'
@@ -35,6 +38,11 @@ import { Route as ServicesMigrationRouteImport } from './routes/services/migrati
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LangRoute = LangRouteImport.update({
+  id: '/$lang',
+  path: '/$lang',
   getParentRoute: () => rootRouteImport,
 } as any)
 const AboutRoute = AboutRouteImport.update({
@@ -92,6 +100,16 @@ const TermsRoute = TermsRouteImport.update({
   path: '/terms',
   getParentRoute: () => rootRouteImport,
 } as any)
+const LangIndexRoute = LangIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => LangRoute,
+} as any)
+const LangSplatRoute = LangSplatRouteImport.update({
+  id: '/$',
+  path: '/$',
+  getParentRoute: () => LangRoute,
+} as any)
 const BlogIndexRoute = BlogIndexRouteImport.update({
   id: '/blog/',
   path: '/blog/',
@@ -145,6 +163,7 @@ const ServicesMigrationRoute = ServicesMigrationRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/$lang': typeof LangRouteWithChildren
   '/about': typeof AboutRoute
   '/contact': typeof ContactRoute
   '/cookies': typeof CookiesRoute
@@ -156,6 +175,7 @@ export interface FileRoutesByFullPath {
   '/solutions': typeof SolutionsRoute
   '/strategy': typeof StrategyRoute
   '/terms': typeof TermsRoute
+  '/$lang/$': typeof LangSplatRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/experts/lovable': typeof ExpertsLovableRoute
   '/experts/outsystems': typeof ExpertsOutsystemsRoute
@@ -164,6 +184,7 @@ export interface FileRoutesByFullPath {
   '/services/implementation': typeof ServicesImplementationRoute
   '/services/managed': typeof ServicesManagedRoute
   '/services/migration': typeof ServicesMigrationRoute
+  '/$lang/': typeof LangIndexRoute
   '/blog/': typeof BlogIndexRoute
   '/services/': typeof ServicesIndexRoute
 }
@@ -180,6 +201,7 @@ export interface FileRoutesByTo {
   '/solutions': typeof SolutionsRoute
   '/strategy': typeof StrategyRoute
   '/terms': typeof TermsRoute
+  '/$lang/$': typeof LangSplatRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/experts/lovable': typeof ExpertsLovableRoute
   '/experts/outsystems': typeof ExpertsOutsystemsRoute
@@ -188,12 +210,14 @@ export interface FileRoutesByTo {
   '/services/implementation': typeof ServicesImplementationRoute
   '/services/managed': typeof ServicesManagedRoute
   '/services/migration': typeof ServicesMigrationRoute
+  '/$lang': typeof LangIndexRoute
   '/blog': typeof BlogIndexRoute
   '/services': typeof ServicesIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/$lang': typeof LangRouteWithChildren
   '/about': typeof AboutRoute
   '/contact': typeof ContactRoute
   '/cookies': typeof CookiesRoute
@@ -205,6 +229,7 @@ export interface FileRoutesById {
   '/solutions': typeof SolutionsRoute
   '/strategy': typeof StrategyRoute
   '/terms': typeof TermsRoute
+  '/$lang/$': typeof LangSplatRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/experts/lovable': typeof ExpertsLovableRoute
   '/experts/outsystems': typeof ExpertsOutsystemsRoute
@@ -213,6 +238,7 @@ export interface FileRoutesById {
   '/services/implementation': typeof ServicesImplementationRoute
   '/services/managed': typeof ServicesManagedRoute
   '/services/migration': typeof ServicesMigrationRoute
+  '/$lang/': typeof LangIndexRoute
   '/blog/': typeof BlogIndexRoute
   '/services/': typeof ServicesIndexRoute
 }
@@ -220,6 +246,7 @@ export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
+    | '/$lang'
     | '/about'
     | '/contact'
     | '/cookies'
@@ -231,6 +258,7 @@ export interface FileRouteTypes {
     | '/solutions'
     | '/strategy'
     | '/terms'
+    | '/$lang/$'
     | '/blog/$slug'
     | '/experts/lovable'
     | '/experts/outsystems'
@@ -239,6 +267,7 @@ export interface FileRouteTypes {
     | '/services/implementation'
     | '/services/managed'
     | '/services/migration'
+    | '/$lang/'
     | '/blog/'
     | '/services/'
   fileRoutesByTo: FileRoutesByTo
@@ -255,6 +284,7 @@ export interface FileRouteTypes {
     | '/solutions'
     | '/strategy'
     | '/terms'
+    | '/$lang/$'
     | '/blog/$slug'
     | '/experts/lovable'
     | '/experts/outsystems'
@@ -263,11 +293,13 @@ export interface FileRouteTypes {
     | '/services/implementation'
     | '/services/managed'
     | '/services/migration'
+    | '/$lang'
     | '/blog'
     | '/services'
   id:
     | '__root__'
     | '/'
+    | '/$lang'
     | '/about'
     | '/contact'
     | '/cookies'
@@ -279,6 +311,7 @@ export interface FileRouteTypes {
     | '/solutions'
     | '/strategy'
     | '/terms'
+    | '/$lang/$'
     | '/blog/$slug'
     | '/experts/lovable'
     | '/experts/outsystems'
@@ -287,12 +320,14 @@ export interface FileRouteTypes {
     | '/services/implementation'
     | '/services/managed'
     | '/services/migration'
+    | '/$lang/'
     | '/blog/'
     | '/services/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  LangRoute: typeof LangRouteWithChildren
   AboutRoute: typeof AboutRoute
   ContactRoute: typeof ContactRoute
   CookiesRoute: typeof CookiesRoute
@@ -323,6 +358,13 @@ declare module '@tanstack/react-router' {
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/$lang': {
+      id: '/$lang'
+      path: '/$lang'
+      fullPath: '/$lang'
+      preLoaderRoute: typeof LangRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/about': {
@@ -402,6 +444,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof TermsRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/$lang/': {
+      id: '/$lang/'
+      path: '/'
+      fullPath: '/$lang/'
+      preLoaderRoute: typeof LangIndexRouteImport
+      parentRoute: typeof LangRoute
+    }
+    '/$lang/$': {
+      id: '/$lang/$'
+      path: '/$'
+      fullPath: '/$lang/$'
+      preLoaderRoute: typeof LangSplatRouteImport
+      parentRoute: typeof LangRoute
+    }
     '/blog/': {
       id: '/blog/'
       path: '/blog'
@@ -475,8 +531,21 @@ declare module '@tanstack/react-router' {
   }
 }
 
+interface LangRouteChildren {
+  LangSplatRoute: typeof LangSplatRoute
+  LangIndexRoute: typeof LangIndexRoute
+}
+
+const LangRouteChildren: LangRouteChildren = {
+  LangSplatRoute: LangSplatRoute,
+  LangIndexRoute: LangIndexRoute,
+}
+
+const LangRouteWithChildren = LangRoute._addFileChildren(LangRouteChildren)
+
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  LangRoute: LangRouteWithChildren,
   AboutRoute: AboutRoute,
   ContactRoute: ContactRoute,
   CookiesRoute: CookiesRoute,

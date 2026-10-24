@@ -1,5 +1,7 @@
 import { useState } from "react";
-import { Link, useLocation } from "@tanstack/react-router";
+import { useLocation } from "@tanstack/react-router";
+import { Link } from "@/components/LocalizedLink";
+import { basePath } from "@/lib/localized-seo";
 import { Menu, X, ArrowUpRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import LanguageSelector from "@/components/LanguageSelector";
@@ -46,7 +48,7 @@ export default function Header() {
               key={l.to}
               variant="ghost"
               className={
-                location.pathname === l.to
+                basePath(location.pathname) === l.to
                   ? "text-accent"
                   : "text-muted-foreground"
               }

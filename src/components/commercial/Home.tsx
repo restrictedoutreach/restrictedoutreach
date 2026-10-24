@@ -1,5 +1,5 @@
 import { ArrowUpRight, ArrowDown, Check, Circle } from "lucide-react";
-import { Link } from "@tanstack/react-router";
+import { Link } from "@/components/LocalizedLink";
 import Layout from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
 import { useCommercial } from "@/lib/commercial";

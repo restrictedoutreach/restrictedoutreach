@@ -1,10 +1,14 @@
-import { useEffect } from "react";
+import { useEffect, useMemo } from "react";
+import { createInstance } from "i18next";
+import { I18nextProvider } from "react-i18next";
 import {
   createRootRouteWithContext,
   HeadContent,
   Outlet,
   Scripts,
   useRouter,
+  useLocation,
+  useNavigate,
   type ErrorComponentProps,
 } from "@tanstack/react-router";
 import type { QueryClient } from "@tanstack/react-query";
@@ -19,7 +23,8 @@ import { reportLovableError } from "@/lib/lovable-error-reporting";
 import appCss from "../styles.css?url";
 
 // ported from main.tsx
-import i18n, { getDefaultLanguage } from "@/i18n";
+import { getDefaultLanguage, resources } from "@/i18n";
+import { basePath, pathLanguage, commercialPaths } from "@/lib/localized-seo";
 
 const organizationJsonLd = {
   "@context": "https://schema.org",
@@ -128,8 +133,9 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
 );
 
 function RootShell({ children }: { children: React.ReactNode }) {
+  const pathname = useLocation({ select: (location) => location.pathname });
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang={pathLanguage(pathname)} suppressHydrationWarning>
       <head>
         <HeadContent />
       </head>
@@ -143,22 +149,29 @@ function RootShell({ children }: { children: React.ReactNode }) {
 
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
+  const pathname = useLocation({ select: (location) => location.pathname });
+  const language = pathLanguage(pathname);
+  const navigate = useNavigate();
+  const translation = useMemo(() => {
+    const instance = createInstance();
+    instance.init({ resources, lng: language, fallbackLng: "en", initImmediate: false, interpolation: { escapeValue: false } });
+    return instance;
+  }, [language]);
 
   useEffect(() => {
+    // Detection chooses a URL, never mutates a shared SSR translation instance.
     const detected = getDefaultLanguage();
-    if (detected !== i18n.language) i18n.changeLanguage(detected);
-    const setLang = () => {
-      document.documentElement.lang = i18n.language;
-    };
-    setLang();
-    i18n.on("languageChanged", setLang);
-    return () => {
-      i18n.off("languageChanged", setLang);
-    };
+    const path = commercialPaths.find((entry) => entry === basePath(pathname));
+    if (language === "en" && path && (detected === "es" || detected === "ca")) {
+      if (path === "/") void navigate({ to: "/$lang", params: { lang: detected }, replace: true });
+      else void navigate({ to: "/$lang/$", params: { lang: detected, _splat: path.slice(1) }, replace: true });
+    }
   }, []);
+  useEffect(() => { document.documentElement.lang = language; }, [language]);
 
   return (
     <QueryClientProvider client={queryClient}>
+      <I18nextProvider i18n={translation}>
       <TooltipProvider>
         <Toaster />
         <Sonner />
@@ -166,6 +179,7 @@ function RootComponent() {
         <CookieConsent />
         <Chatbot />
       </TooltipProvider>
+      </I18nextProvider>
     </QueryClientProvider>
   );
 }

@@ -1,11 +1,9 @@
 import Layout from "@/components/layout/Layout";
-import SEO from "@/components/SEO";
 import { motion } from "framer-motion";
 
 export default function CookiesPolicy() {
   return (
     <Layout>
-      <SEO title="Cookies Policy" description="RESTRICTED OUTREACH cookies policy. Learn about the cookies we use, your choices, and how to manage cookie preferences on our website." canonical="/cookies" noindex={false} />
       <section className="py-20">
         <div className="container max-w-4xl">
           <motion.div
