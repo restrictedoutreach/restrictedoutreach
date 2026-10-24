@@ -4,6 +4,7 @@ import { useCommercial, diagnosticRules } from "@/lib/commercial";
 import { Action, Closing, MethodSteps, Verticals } from "./Shared";
 import hero from "@/assets/human-agent-collaboration.jpg";
 import systems from "@/assets/agent-systems-workspace.jpg";
+import HeroMatrix from "@/components/animations/HeroMatrix";
 export type OfferingKind =
   "strategy" | "development" | "method" | "about" | "diagnosis" | "services";
 export default function Offering({ kind }: { kind: OfferingKind }) {
@@ -217,6 +218,7 @@ export default function Offering({ kind }: { kind: OfferingKind }) {
       <section className="offering-hero relative overflow-hidden border-b border-border py-12 lg:py-16">
         <img src={dev ? systems : hero} width={1920} height={1024} alt="" className="cinematic-image absolute inset-0 h-full w-full object-cover" />
         <div className="hero-shade absolute inset-0" />
+        {(dev || method || about) && <HeroMatrix />}
         <div className="hero-signal" aria-hidden="true" />
         <div className="commercial-container relative z-10">
           <p className="eyebrow text-primary">
