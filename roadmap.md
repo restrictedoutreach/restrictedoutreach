@@ -1,4 +1,5 @@
 # Rediseño comercial RESTRICTED OUTREACH
+- [ ] SEO multiidioma: páginas ES/CA con HTML traducido, metadatos, enlaces alternativos, selector y sitemap; verificar Search Console.
 - [x] Fondos humano–robot, movimiento continuo elegante y entradas animadas; comprobados navegación, móvil y movimiento reducido sin errores.
 - [x] Portada, dos verticales, método, diagnóstico y nosotros en ES/CA/EN.
 - [x] Navegación, contacto y asistente adaptados.
