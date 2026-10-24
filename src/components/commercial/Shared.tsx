@@ -10,6 +10,7 @@ import {
 import { Link } from "@tanstack/react-router";
 import { Button } from "@/components/ui/button";
 import { useCommercial } from "@/lib/commercial";
+import systems from "@/assets/agent-systems-workspace.jpg";
 export function Action({
   development = false,
   outline = false,
@@ -47,8 +48,10 @@ export function Action({
 export function Closing() {
   const c = useCommercial();
   return (
-    <section className="commercial-close border-y border-border py-12 lg:py-16">
-      <div className="commercial-container flex flex-col justify-between gap-8 lg:flex-row lg:items-center">
+    <section className="commercial-close relative overflow-hidden border-y border-border py-12 lg:py-16">
+      <img src={systems} width={1920} height={1024} loading="lazy" alt="" className="cinematic-image absolute inset-0 h-full w-full object-cover" />
+      <div className="close-shade absolute inset-0" />
+      <div className="commercial-container relative z-10 flex flex-col justify-between gap-8 lg:flex-row lg:items-center">
         <div>
           <p className="eyebrow text-primary">
             {c("EL SIGUIENTE PASO", "EL SEGÜENT PAS", "THE NEXT STEP")}

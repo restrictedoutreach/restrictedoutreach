@@ -2,7 +2,8 @@ import Layout from "@/components/layout/Layout";
 import { Check, ArrowRight } from "lucide-react";
 import { useCommercial, diagnosticRules } from "@/lib/commercial";
 import { Action, Closing, MethodSteps, Verticals } from "./Shared";
-import hero from "@/assets/ai-consultancy.jpg";
+import hero from "@/assets/human-agent-collaboration.jpg";
+import systems from "@/assets/agent-systems-workspace.jpg";
 export type OfferingKind =
   "strategy" | "development" | "method" | "about" | "diagnosis" | "services";
 export default function Offering({ kind }: { kind: OfferingKind }) {
@@ -213,8 +214,11 @@ export default function Offering({ kind }: { kind: OfferingKind }) {
     ];
   return (
     <Layout>
-      <section className="border-b border-border py-12 lg:py-16">
-        <div className="commercial-container">
+      <section className="offering-hero relative overflow-hidden border-b border-border py-12 lg:py-16">
+        <img src={dev ? systems : hero} width={1920} height={1024} alt="" className="cinematic-image absolute inset-0 h-full w-full object-cover" />
+        <div className="hero-shade absolute inset-0" />
+        <div className="hero-signal" aria-hidden="true" />
+        <div className="commercial-container relative z-10">
           <p className="eyebrow text-primary">
             {strategy
               ? c("ESTRATEGIA IA", "ESTRATÈGIA IA", "AI STRATEGY")
@@ -232,10 +236,10 @@ export default function Offering({ kind }: { kind: OfferingKind }) {
                         )
                       : "STRATEGY + DEVELOPMENT"}
           </p>
-          <h1 className="mt-6 max-w-4xl text-4xl sm:text-5xl font-medium leading-tight">
+          <h1 className="mt-6 max-w-2xl text-4xl sm:text-5xl font-medium leading-tight">
             {title}
           </h1>
-          <p className="mt-6 text-lg text-muted-foreground leading-relaxed max-w-2xl">
+          <p className="mt-6 text-lg text-muted-foreground leading-relaxed max-w-xl">
             {intro}
           </p>
           <div className="mt-8">
@@ -246,7 +250,7 @@ export default function Offering({ kind }: { kind: OfferingKind }) {
       {about && (
         <div className="commercial-container pt-12">
           <img
-            src={hero}
+            src={systems}
             width={1920}
             height={1024}
             loading="lazy"
@@ -255,7 +259,7 @@ export default function Offering({ kind }: { kind: OfferingKind }) {
               "Visió i integració tecnològica",
               "Technology vision and integration",
             )}
-            className="h-64 sm:h-80 w-full object-cover"
+            className="collaboration-panorama h-64 sm:h-80 w-full object-cover"
           />
         </div>
       )}
