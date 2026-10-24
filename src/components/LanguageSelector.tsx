@@ -30,7 +30,7 @@ const LanguageSelector = () => {
           {lang.code === "en" ? (
             <Link to={path} hrefLang="en" aria-label="English" aria-current={language === "en" ? "page" : undefined} onClick={() => localStorage.setItem("language", "en")}>{lang.label}</Link>
           ) : path === "/" ? (
-            <Link to="/$lang/" params={{ lang: lang.code }} hrefLang={lang.code} aria-label={lang.code === "es" ? "Español" : "Català"} aria-current={language === lang.code ? "page" : undefined} onClick={() => localStorage.setItem("language", lang.code)}>{lang.label}</Link>
+            <Link to="/$lang" params={{ lang: lang.code }} hrefLang={lang.code} aria-label={lang.code === "es" ? "Español" : "Català"} aria-current={language === lang.code ? "page" : undefined} onClick={() => localStorage.setItem("language", lang.code)}>{lang.label}</Link>
           ) : (
             <Link to="/$lang/$" params={{ lang: lang.code, _splat: path.slice(1) }} hrefLang={lang.code} aria-label={lang.code === "es" ? "Español" : "Català"} aria-current={language === lang.code ? "page" : undefined} onClick={() => localStorage.setItem("language", lang.code)}>{lang.label}</Link>
           )}

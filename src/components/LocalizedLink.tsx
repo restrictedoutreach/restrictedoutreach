@@ -7,6 +7,6 @@ export function Link({ to, ...props }: AnchorHTMLAttributes<HTMLAnchorElement> &
   const pathname = useLocation({ select: (location) => location.pathname });
   const lang = pathLanguage(pathname);
   if (lang === "en" || !commercialPaths.some((path) => path === to)) return <RouterLink to={to} {...props} />;
-  if (to === "/") return <RouterLink to="/$lang/" params={{ lang }} {...props} />;
+  if (to === "/") return <RouterLink to="/$lang" params={{ lang }} {...props} />;
   return <RouterLink to="/$lang/$" params={{ lang, _splat: basePath(to).slice(1) }} {...props} />;
 }

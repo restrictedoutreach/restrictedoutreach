@@ -163,7 +163,7 @@ function RootComponent() {
     const detected = getDefaultLanguage();
     const path = commercialPaths.find((entry) => entry === basePath(pathname));
     if (language === "en" && path && (detected === "es" || detected === "ca")) {
-      if (path === "/") void navigate({ to: "/$lang/", params: { lang: detected }, replace: true });
+      if (path === "/") void navigate({ to: "/$lang", params: { lang: detected }, replace: true });
       else void navigate({ to: "/$lang/$", params: { lang: detected, _splat: path.slice(1) }, replace: true });
     }
   }, []);
