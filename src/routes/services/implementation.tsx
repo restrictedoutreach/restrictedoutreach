@@ -1,6 +1,2 @@
-import { createFileRoute } from "@tanstack/react-router";
-import ImplementationService from "@/pages/services/ImplementationService";
-
-export const Route = createFileRoute("/services/implementation")({
-  component: ImplementationService,
-});
+import {createFileRoute,redirect} from '@tanstack/react-router';
+export const Route=createFileRoute('/services/implementation')({beforeLoad:()=>{throw redirect({to:'/strategy',statusCode:301})}});

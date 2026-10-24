@@ -5,6 +5,7 @@ import {
   Outlet,
   Scripts,
   useRouter,
+  type ErrorComponentProps,
 } from "@tanstack/react-router";
 import type { QueryClient } from "@tanstack/react-query";
 import { QueryClientProvider } from "@tanstack/react-query";
@@ -25,7 +26,7 @@ const organizationJsonLd = {
   "@type": "Organization",
   name: "RESTRICTED OUTREACH",
   description:
-    "Spain's first certified Plane partner. Expert implementation, migration, and custom solutions.",
+    "AI strategy at scale and development with Lovable and agentic Claude.",
   url: "https://www.restrictedoutreach.com",
   logo: "https://www.restrictedoutreach.com/favicon.png",
   sameAs: [],
@@ -41,24 +42,20 @@ const websiteJsonLd = {
   "@type": "WebSite",
   name: "RESTRICTED OUTREACH",
   url: "https://www.restrictedoutreach.com",
-  potentialAction: {
-    "@type": "SearchAction",
-    target: "https://www.restrictedoutreach.com/?q={search_term_string}",
-    "query-input": "required name=search_term_string",
-  },
+
 };
 
 const professionalServiceJsonLd = {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
   name: "RESTRICTED OUTREACH",
-  description: "Expert Plane implementation, migration, and consulting services",
+  description: "AI strategy, adoption and application development",
   url: "https://www.restrictedoutreach.com",
   priceRange: "$$",
   areaServed: { "@type": "Country", name: "Spain" },
   serviceType: [
-    "Software Implementation",
-    "Migration Services",
+    "AI Strategy",
+    "AI Adoption",
     "Technical Consulting",
     "Custom Development",
   ],
@@ -73,13 +70,14 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       {
         name: "keywords",
         content:
-          "Plane partner, Plane implementation, project management, Spain, Jira alternative, workflow automation, agile tools, enterprise software",
+          "AI strategy, Lovable development, Claude agents, AI adoption, Barcelona",
       },
       { name: "robots", content: "index, follow" },
       { property: "og:site_name", content: "RESTRICTED OUTREACH" },
       { property: "og:locale", content: "en_US" },
     ],
     links: [
+      { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" },
       { rel: "stylesheet", href: appCss },
       { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
       { rel: "icon", type: "image/png", sizes: "32x32", href: "/favicon.png" },
@@ -123,6 +121,9 @@ function RootComponent() {
   useEffect(() => {
     const detected = getDefaultLanguage();
     if (detected !== i18n.language) i18n.changeLanguage(detected);
+    const setLang = () => { document.documentElement.lang = i18n.language; };
+    setLang(); i18n.on("languageChanged", setLang);
+    return () => { i18n.off("languageChanged", setLang); };
   }, []);
 
   return (
@@ -138,7 +139,7 @@ function RootComponent() {
   );
 }
 
-function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
+function ErrorComponent({ error, reset }: ErrorComponentProps) {
   console.error(error);
   const router = useRouter();
 

@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 export default function TermsOfService() {
   return (
     <Layout>
-      <SEO title="Terms of Service" description="Terms of Service for RESTRICTED OUTREACH. Read our terms governing access to and use of our Plane consulting and implementation services." canonical="/terms" noindex={false} />
+      <SEO title="Terms of Service" description="Terms of Service for RESTRICTED OUTREACH. Read our terms governing access to and use of our AI strategy and development services." canonical="/terms" noindex={false} />
       <section className="py-20">
         <div className="container max-w-4xl">
           <motion.div
@@ -31,7 +31,7 @@ export default function TermsOfService() {
 
               <h2>2. Object and Scope</h2>
               <p>
-                These Terms of Service govern access to and use of the website palantircode.com (hereinafter, the "Website") operated by RESTRICTED OUTREACH (hereinafter, "RESTRICTED OUTREACH", "we", "us", or "our").
+                These Terms of Service govern access to and use of the website restrictedoutreach.com (hereinafter, the "Website") operated by RESTRICTED OUTREACH (hereinafter, "RESTRICTED OUTREACH", "we", "us", or "our").
               </p>
               <p>
                 By accessing or using our Website and services, you agree to be bound by these Terms. If you do not agree to these Terms, please do not use our Website or services.
@@ -42,8 +42,8 @@ export default function TermsOfService() {
                 RESTRICTED OUTREACH provides professional services including but not limited to:
               </p>
               <ul>
-                <li>Plane consulting and implementation services</li>
-                <li>Migration services from other project management tools</li>
+                <li>AI strategy and adoption services</li>
+                <li>Applications and agentic solutions</li>
                 <li>Custom software development</li>
                 <li>Managed services and support</li>
               </ul>
@@ -71,7 +71,7 @@ export default function TermsOfService() {
                 The reproduction, distribution, public communication, transformation, or any other activity involving the content of this Website, as well as its design and the selection and form of presentation of the materials included therein, is prohibited without the prior written consent of RESTRICTED OUTREACH.
               </p>
               <p>
-                Plane and related trademarks are the property of Plane Inc. and are used under license or fair use.
+                Third-party product names and trademarks belong to their respective owners.
               </p>
 
               <h2>6. Third-Party Links</h2>

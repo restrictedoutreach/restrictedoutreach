@@ -1,6 +1,2 @@
-import { createFileRoute } from "@tanstack/react-router";
-import Enterprise from "@/pages/Enterprise";
-
-export const Route = createFileRoute("/enterprise")({
-  component: Enterprise,
-});
+import {createFileRoute,redirect} from '@tanstack/react-router';
+export const Route=createFileRoute('/enterprise')({beforeLoad:()=>{throw redirect({to:'/strategy',statusCode:301})}});

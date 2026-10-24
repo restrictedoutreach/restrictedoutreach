@@ -2,10 +2,9 @@
 
 export const COMPANY = {
   name: "RESTRICTED OUTREACH",
-  tagline: "Spain's First Certified Plane Partner",
-  description: "We help teams ship faster with expert implementation, migration, and custom solutions for Plane's unified workspace.",
+  tagline: "AI Strategy & Development",
+  description: "AI strategy at scale, applications with Lovable and agentic solutions with Claude.",
   email: "raul.pelaez@palantircode.com",
-  phone: "+34 900 000 000",
   address: "Benet Cortada 8, Escalera F, 2º 1ª, 08174 Sant Cugat del Vallés, Barcelona, Spain",
 } as const;
 
@@ -193,6 +192,5 @@ export const WHY_US = [
 
 export const SOCIAL_LINKS = [
   { name: "LinkedIn", href: "https://www.linkedin.com/company/restricted-outreach", icon: "Linkedin" },
-  { name: "Twitter", href: "#", icon: "Twitter" },
   { name: "GitHub", href: "https://github.com/Restricted Outreach", icon: "Github" },
 ] as const;
