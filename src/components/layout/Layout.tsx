@@ -1,6 +1,7 @@
 import { ReactNode } from "react";
 import Header from "./Header";
 import Footer from "./Footer";
+import CommercialMotion from "@/components/animations/CommercialMotion";
 
 interface LayoutProps {
   children: ReactNode;
@@ -8,7 +9,8 @@ interface LayoutProps {
 
 const Layout = ({ children }: LayoutProps) => {
   return (
-    <div className="flex min-h-screen flex-col">
+    <div className="animated-site flex min-h-screen flex-col">
+      <CommercialMotion />
       <Header />
       <main className="flex-1">{children}</main>
       <Footer />

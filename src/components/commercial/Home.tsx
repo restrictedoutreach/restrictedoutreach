@@ -2,9 +2,8 @@ import { ArrowUpRight, ArrowDown, Check, Circle } from "lucide-react";
 import { Link } from "@tanstack/react-router";
 import Layout from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
-import MatrixRain from "@/components/animations/MatrixRain";
 import { useCommercial } from "@/lib/commercial";
-import hero from "@/assets/ai-consultancy.jpg";
+import hero from "@/assets/human-agent-collaboration.jpg";
 import { Action, Closing, Verticals, MethodSteps, Flow } from "./Shared";
 export default function CommercialHome() {
   const c = useCommercial();
@@ -16,16 +15,14 @@ export default function CommercialHome() {
           width={1920}
           height={1024}
           alt={c(
-            "Espacio de trabajo tecnológico y análisis de procesos",
-            "Espai de treball tecnològic i anàlisi de processos",
-            "Technology workspace and process analysis",
+            "Agente robótico colaborando con profesionales y sistemas empresariales",
+            "Agent robòtic col·laborant amb professionals i sistemes empresarials",
+            "Robotic agent collaborating with professionals and enterprise systems",
           )}
-          className="absolute inset-0 h-full w-full object-cover"
+          className="cinematic-image absolute inset-0 h-full w-full object-cover"
         />
         <div className="hero-shade absolute inset-0" />
-        <div className="absolute inset-0 opacity-10 pointer-events-none">
-          <MatrixRain columnCount={12} opacity={0.15} />
-        </div>
+        <div className="hero-signal" aria-hidden="true" />
         <div className="commercial-container relative z-10 py-12 lg:py-16">
           <div className="flex items-center gap-3 eyebrow text-accent">
             <span className="h-1.5 w-1.5 bg-accent" />

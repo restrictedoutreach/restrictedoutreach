@@ -1,4 +1,5 @@
 # Rediseño comercial RESTRICTED OUTREACH
+- [ ] Fondos humano–robot, movimiento continuo elegante y entradas animadas en todas las páginas; comprobar móvil y movimiento reducido.
 - [x] Portada, dos verticales, método, diagnóstico y nosotros en ES/CA/EN.
 - [x] Navegación, contacto y asistente adaptados.
 - [x] Retirada de contenido antiguo, redirecciones y SEO por página.
