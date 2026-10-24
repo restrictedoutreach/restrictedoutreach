@@ -1,6 +1,6 @@
 @import "tailwindcss" source(none);
-@source "../src";
 @import "tw-animate-css";
+@source "../src";
 @plugin "@tailwindcss/typography";
 
 @custom-variant dark (&:is(.dark *));
@@ -76,11 +76,11 @@
   --popover: hsl(240 10% 8%);
   --popover-foreground: hsl(0 0% 95%);
   --primary: hsl(280 70% 60%);
-  --primary-foreground: hsl(0 0% 100%);
+  --primary-foreground: oklch(0.12 0 0);
   --secondary: hsl(280 40% 15%);
   --secondary-foreground: hsl(280 60% 80%);
   --muted: hsl(240 10% 15%);
-  --muted-foreground: hsl(240 5% 55%);
+  --muted-foreground: oklch(0.74 0.005 280);
   --accent: hsl(185 80% 55%);
   --accent-foreground: hsl(240 10% 6%);
   --destructive: hsl(0 70% 50%);
@@ -120,11 +120,11 @@
   --popover: hsl(240 10% 8%);
   --popover-foreground: hsl(0 0% 95%);
   --primary: hsl(280 70% 60%);
-  --primary-foreground: hsl(0 0% 100%);
+  --primary-foreground: oklch(0.12 0 0);
   --secondary: hsl(280 40% 15%);
   --secondary-foreground: hsl(280 60% 80%);
   --muted: hsl(240 10% 15%);
-  --muted-foreground: hsl(240 5% 55%);
+  --muted-foreground: oklch(0.74 0.005 280);
   --accent: hsl(185 80% 55%);
   --accent-foreground: hsl(240 10% 6%);
   --destructive: hsl(0 70% 50%);
@@ -302,3 +302,22 @@
     animation: accordion-up 0.2s ease-out;
   }
 }
+
+@theme { --font-sans: "Manrope", sans-serif; }
+:root { --hero-shade: linear-gradient(90deg, color-mix(in oklab,var(--background) 94%,transparent) 0%, color-mix(in oklab,var(--background) 82%,transparent) 39%, color-mix(in oklab,var(--background) 10%,transparent) 100%); }
+body { font-family: var(--font-sans); letter-spacing: 0; }
+.commercial-container { width: min(100% - 48px, 1180px); margin-inline:auto; }
+.commercial-hero { min-height: 660px; }
+.hero-shade { background:var(--hero-shade); }
+.eyebrow { font-size:11px; font-weight:600; letter-spacing:0; }
+.section-heading { margin-bottom:32px; }
+.section-heading h2 { font-size:32px; line-height:1.2; font-weight:500; margin:14px 0; }
+.vertical-panel { border:1px solid var(--border); border-radius:6px; padding:32px; background:var(--card); transition:border-color .2s; }
+.vertical-panel:hover { border-color:var(--primary); }
+.commercial-band { background:var(--card); }
+.commercial-close { background:var(--background); }
+.usecase-panel { border-top:1px solid var(--border); padding-top:24px; }
+.process-flow { display:flex; flex-wrap:wrap; gap:12px; padding-block:24px; font-size:12px; }
+h1,h2,h3 { letter-spacing:0!important; }
+@media(max-width:640px){ .commercial-container { width:calc(100% - 32px); } .commercial-hero { min-height:650px; } .hero-shade { background:color-mix(in oklab,var(--background) 85%,transparent); } .vertical-panel {padding:24px;} .section-heading h2 {font-size:28px;} }
+@media(prefers-reduced-motion:reduce){*,*::before,*::after {animation:none!important;transition:none!important;scroll-behavior:auto!important;}}
