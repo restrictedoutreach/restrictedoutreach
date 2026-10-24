@@ -2,6 +2,8 @@ import { useState, useRef, useEffect } from "react";
 import { MessageSquare, X, Send, Bot, User } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useTranslation } from "react-i18next";
+import { Button } from "@/components/ui/button";
+import { useCommercial } from "@/lib/commercial";
 import ReactMarkdown from "react-markdown";
 
 type Message = { role: "user" | "assistant"; content: string };
@@ -10,13 +12,14 @@ const CHAT_URL = `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/chat`;
 
 const Chatbot = () => {
   const { t } = useTranslation();
+  const c = useCommercial();
   const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState<Message[]>([]);
   const [input, setInput] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const scrollRef = useRef<HTMLDivElement>(null);
 
-  const suggestions = [t("chatbot.suggestion1"), t("chatbot.suggestion2"), t("chatbot.suggestion3")];
+  const suggestions = [c("¿Cómo escalar la IA?","Com escalar la IA?","How can we scale AI?"), c("Desarrollo con Lovable","Desenvolupament amb Lovable","Development with Lovable"), c("Agentes con Claude","Agents amb Claude","Agents with Claude")];
 
   useEffect(() => {
     scrollRef.current?.scrollTo({ top: scrollRef.current.scrollHeight, behavior: "smooth" });
@@ -88,12 +91,12 @@ const Chatbot = () => {
     <>
       <AnimatePresence>
         {!isOpen && (
-          <motion.button initial={{ scale: 0 }} animate={{ scale: 1 }} exit={{ scale: 0 }}
+          <Button size="icon"
             onClick={() => setIsOpen(true)}
             className="fixed bottom-6 right-6 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-primary text-primary-foreground shadow-lg hover:opacity-90 transition-opacity"
             aria-label="Open chat">
             <MessageSquare className="h-6 w-6" />
-          </motion.button>
+          </Button>
         )}
       </AnimatePresence>
 
@@ -101,15 +104,15 @@ const Chatbot = () => {
         {isOpen && (
           <motion.div initial={{ opacity: 0, y: 20, scale: 0.95 }} animate={{ opacity: 1, y: 0, scale: 1 }} exit={{ opacity: 0, y: 20, scale: 0.95 }}
             transition={{ duration: 0.2 }}
-            className="fixed bottom-6 right-6 z-50 flex h-[500px] w-[380px] max-w-[calc(100vw-2rem)] flex-col overflow-hidden rounded-2xl border border-border bg-card shadow-2xl">
+            className="fixed bottom-6 right-6 z-50 flex h-[500px] w-[380px] max-w-[calc(100vw-2rem)] max-h-[calc(100dvh-3rem)] flex-col overflow-hidden rounded-md border border-border bg-card shadow-2xl">
             <div className="flex items-center justify-between border-b border-border bg-primary/10 px-4 py-3">
               <div className="flex items-center gap-2">
                 <Bot className="h-5 w-5 text-primary" />
                 <span className="font-semibold text-foreground text-sm">RESTRICTED OUTREACH Assistant</span>
               </div>
-              <button onClick={() => setIsOpen(false)} aria-label="Close chat" className="rounded-lg p-1 text-muted-foreground hover:bg-muted hover:text-foreground transition-colors">
+              <Button onClick={() => setIsOpen(false)} aria-label="Close chat" className="rounded-lg p-1 text-muted-foreground hover:bg-muted hover:text-foreground transition-colors">
                 <X className="h-4 w-4" />
-              </button>
+              </Button>
             </div>
 
             <div ref={scrollRef} className="flex-1 overflow-y-auto p-4 space-y-4">
@@ -118,10 +121,10 @@ const Chatbot = () => {
                   <p className="text-sm text-muted-foreground text-center">{t("chatbot.greeting")}</p>
                   <div className="flex flex-wrap gap-2 justify-center">
                     {suggestions.map((s) => (
-                      <button key={s} onClick={() => sendMessage(s)}
+                      <Button key={s} onClick={() => sendMessage(s)}
                         className="rounded-full border border-border bg-muted/50 px-3 py-1.5 text-xs text-muted-foreground hover:border-primary/50 hover:text-foreground transition-colors">
                         {s}
-                      </button>
+                      </Button>
                     ))}
                   </div>
                 </div>
@@ -160,12 +163,12 @@ const Chatbot = () => {
             <form onSubmit={(e) => { e.preventDefault(); sendMessage(input); }} className="border-t border-border p-3">
               <div className="flex gap-2">
                 <input value={input} onChange={(e) => setInput(e.target.value)} placeholder={t("chatbot.placeholder")}
-                  className="flex-1 rounded-xl border border-border bg-muted px-3 py-2 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-1 focus:ring-primary"
+                  aria-label={t("chatbot.placeholder")} className="min-w-0 flex-1 rounded-md border border-border bg-muted px-3 py-2 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-1 focus:ring-primary"
                   disabled={isLoading} />
-                <button type="submit" aria-label="Send message" disabled={!input.trim() || isLoading}
+                <Button type="submit" aria-label="Send message" disabled={!input.trim() || isLoading}
                   className="flex h-9 w-9 items-center justify-center rounded-xl bg-primary text-primary-foreground disabled:opacity-50 transition-opacity">
                   <Send className="h-4 w-4" />
-                </button>
+                </Button>
               </div>
             </form>
           </motion.div>

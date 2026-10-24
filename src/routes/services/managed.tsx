@@ -1,6 +1,6 @@
-import { createFileRoute } from "@tanstack/react-router";
-import ManagedService from "@/pages/services/ManagedService";
-
+import { createFileRoute, redirect } from "@tanstack/react-router";
 export const Route = createFileRoute("/services/managed")({
-  component: ManagedService,
+  beforeLoad: () => {
+    throw redirect({ to: "/strategy", statusCode: 301 });
+  },
 });
