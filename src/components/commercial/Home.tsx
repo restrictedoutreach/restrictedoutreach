@@ -52,7 +52,7 @@ export default function CommercialHome() {
                 height={94}
                 alt=""
                 aria-hidden="true"
-                className="block h-auto w-full"
+                className="brand-wordmark block h-auto w-full"
               />
             </h1>
           </div>

@@ -116,6 +116,40 @@
   );
 }
 
+:root.light {
+  --background: oklch(0.99 0 0);
+  --foreground: oklch(0.2 0.008 280);
+  --card: oklch(0.96 0.003 280);
+  --card-foreground: var(--foreground);
+  --popover: oklch(1 0 0);
+  --popover-foreground: var(--foreground);
+  --primary: oklch(0.72 0.19 310);
+  --primary-foreground: oklch(0.12 0 0);
+  --secondary: oklch(0.93 0.025 310);
+  --secondary-foreground: oklch(0.36 0.12 310);
+  --muted: oklch(0.94 0.003 280);
+  --muted-foreground: oklch(0.43 0.012 280);
+  --accent: oklch(0.43 0.075 195);
+  --accent-foreground: oklch(1 0 0);
+  --destructive: oklch(0.52 0.2 25);
+  --border: oklch(0.85 0.006 280);
+  --input: oklch(0.89 0.006 280);
+  --ring: oklch(0.55 0.2 310);
+  --sidebar: var(--card);
+  --sidebar-foreground: var(--foreground);
+  --sidebar-primary: var(--primary);
+  --sidebar-primary-foreground: var(--primary-foreground);
+  --sidebar-accent: var(--secondary);
+  --sidebar-accent-foreground: var(--secondary-foreground);
+  --sidebar-border: var(--border);
+  --sidebar-ring: var(--ring);
+}
+
+.light .brand-wordmark { filter: invert(1); }
+.light a.text-primary, .light button.text-primary, .light .eyebrow.text-primary {
+  color: var(--ring);
+}
+
 .dark {
   --background: oklch(0.12101257 0.00385769 245.473);
   --foreground: hsl(0 0% 95%);

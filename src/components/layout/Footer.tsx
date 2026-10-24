@@ -14,7 +14,7 @@ export default function Footer() {
               <img
                 src={brand}
                 alt="RESTRICTED OUTREACH"
-                className="h-9 object-contain"
+                className="brand-wordmark h-9 object-contain"
               />
             </Link>
             <p className="mt-5 text-sm text-muted-foreground max-w-xs">

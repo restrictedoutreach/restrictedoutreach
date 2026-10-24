@@ -1,4 +1,5 @@
 # Architecture rules
+- Theme selection uses a single root next-themes provider and semantic CSS tokens, defaulting to dark and persisting the choice without hydration-dependent rendering.
 - Decorative Matrix overlays use deterministic markup and CSS animation, with no pointer interception and no animation in reduced-motion mode, to preserve SSR hydration and accessibility.
 - Commercial content lives in a browser-safe, typed multilingual module and shared presentation components, so Spanish, Catalan and English use the same page structure.
 - Every active content route owns its head metadata; retired public URLs resolve through route-level redirects or explicit Gone responses, not a blanket homepage redirect.
