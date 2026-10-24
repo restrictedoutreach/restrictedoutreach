@@ -13,10 +13,13 @@ import { Route as IndexRouteImport } from './routes/index'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as CookiesRouteImport } from './routes/cookies'
+import { Route as DiagnosisRouteImport } from './routes/diagnosis'
 import { Route as EnterpriseRouteImport } from './routes/enterprise'
 import { Route as JiraVsPlaneRouteImport } from './routes/jira-vs-plane'
+import { Route as MethodRouteImport } from './routes/method'
 import { Route as PrivacyRouteImport } from './routes/privacy'
 import { Route as SolutionsRouteImport } from './routes/solutions'
+import { Route as StrategyRouteImport } from './routes/strategy'
 import { Route as TermsRouteImport } from './routes/terms'
 import { Route as BlogIndexRouteImport } from './routes/blog/index'
 import { Route as BlogSlugRouteImport } from './routes/blog/$slug'
@@ -49,6 +52,11 @@ const CookiesRoute = CookiesRouteImport.update({
   path: '/cookies',
   getParentRoute: () => rootRouteImport,
 } as any)
+const DiagnosisRoute = DiagnosisRouteImport.update({
+  id: '/diagnosis',
+  path: '/diagnosis',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const EnterpriseRoute = EnterpriseRouteImport.update({
   id: '/enterprise',
   path: '/enterprise',
@@ -59,6 +67,11 @@ const JiraVsPlaneRoute = JiraVsPlaneRouteImport.update({
   path: '/jira-vs-plane',
   getParentRoute: () => rootRouteImport,
 } as any)
+const MethodRoute = MethodRouteImport.update({
+  id: '/method',
+  path: '/method',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const PrivacyRoute = PrivacyRouteImport.update({
   id: '/privacy',
   path: '/privacy',
@@ -67,6 +80,11 @@ const PrivacyRoute = PrivacyRouteImport.update({
 const SolutionsRoute = SolutionsRouteImport.update({
   id: '/solutions',
   path: '/solutions',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const StrategyRoute = StrategyRouteImport.update({
+  id: '/strategy',
+  path: '/strategy',
   getParentRoute: () => rootRouteImport,
 } as any)
 const TermsRoute = TermsRouteImport.update({
@@ -130,10 +148,13 @@ export interface FileRoutesByFullPath {
   '/about': typeof AboutRoute
   '/contact': typeof ContactRoute
   '/cookies': typeof CookiesRoute
+  '/diagnosis': typeof DiagnosisRoute
   '/enterprise': typeof EnterpriseRoute
   '/jira-vs-plane': typeof JiraVsPlaneRoute
+  '/method': typeof MethodRoute
   '/privacy': typeof PrivacyRoute
   '/solutions': typeof SolutionsRoute
+  '/strategy': typeof StrategyRoute
   '/terms': typeof TermsRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/experts/lovable': typeof ExpertsLovableRoute
@@ -151,10 +172,13 @@ export interface FileRoutesByTo {
   '/about': typeof AboutRoute
   '/contact': typeof ContactRoute
   '/cookies': typeof CookiesRoute
+  '/diagnosis': typeof DiagnosisRoute
   '/enterprise': typeof EnterpriseRoute
   '/jira-vs-plane': typeof JiraVsPlaneRoute
+  '/method': typeof MethodRoute
   '/privacy': typeof PrivacyRoute
   '/solutions': typeof SolutionsRoute
+  '/strategy': typeof StrategyRoute
   '/terms': typeof TermsRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/experts/lovable': typeof ExpertsLovableRoute
@@ -173,10 +197,13 @@ export interface FileRoutesById {
   '/about': typeof AboutRoute
   '/contact': typeof ContactRoute
   '/cookies': typeof CookiesRoute
+  '/diagnosis': typeof DiagnosisRoute
   '/enterprise': typeof EnterpriseRoute
   '/jira-vs-plane': typeof JiraVsPlaneRoute
+  '/method': typeof MethodRoute
   '/privacy': typeof PrivacyRoute
   '/solutions': typeof SolutionsRoute
+  '/strategy': typeof StrategyRoute
   '/terms': typeof TermsRoute
   '/blog/$slug': typeof BlogSlugRoute
   '/experts/lovable': typeof ExpertsLovableRoute
@@ -196,10 +223,13 @@ export interface FileRouteTypes {
     | '/about'
     | '/contact'
     | '/cookies'
+    | '/diagnosis'
     | '/enterprise'
     | '/jira-vs-plane'
+    | '/method'
     | '/privacy'
     | '/solutions'
+    | '/strategy'
     | '/terms'
     | '/blog/$slug'
     | '/experts/lovable'
@@ -217,10 +247,13 @@ export interface FileRouteTypes {
     | '/about'
     | '/contact'
     | '/cookies'
+    | '/diagnosis'
     | '/enterprise'
     | '/jira-vs-plane'
+    | '/method'
     | '/privacy'
     | '/solutions'
+    | '/strategy'
     | '/terms'
     | '/blog/$slug'
     | '/experts/lovable'
@@ -238,10 +271,13 @@ export interface FileRouteTypes {
     | '/about'
     | '/contact'
     | '/cookies'
+    | '/diagnosis'
     | '/enterprise'
     | '/jira-vs-plane'
+    | '/method'
     | '/privacy'
     | '/solutions'
+    | '/strategy'
     | '/terms'
     | '/blog/$slug'
     | '/experts/lovable'
@@ -260,10 +296,13 @@ export interface RootRouteChildren {
   AboutRoute: typeof AboutRoute
   ContactRoute: typeof ContactRoute
   CookiesRoute: typeof CookiesRoute
+  DiagnosisRoute: typeof DiagnosisRoute
   EnterpriseRoute: typeof EnterpriseRoute
   JiraVsPlaneRoute: typeof JiraVsPlaneRoute
+  MethodRoute: typeof MethodRoute
   PrivacyRoute: typeof PrivacyRoute
   SolutionsRoute: typeof SolutionsRoute
+  StrategyRoute: typeof StrategyRoute
   TermsRoute: typeof TermsRoute
   BlogSlugRoute: typeof BlogSlugRoute
   ExpertsLovableRoute: typeof ExpertsLovableRoute
@@ -307,6 +346,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof CookiesRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/diagnosis': {
+      id: '/diagnosis'
+      path: '/diagnosis'
+      fullPath: '/diagnosis'
+      preLoaderRoute: typeof DiagnosisRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/enterprise': {
       id: '/enterprise'
       path: '/enterprise'
@@ -321,6 +367,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof JiraVsPlaneRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/method': {
+      id: '/method'
+      path: '/method'
+      fullPath: '/method'
+      preLoaderRoute: typeof MethodRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/privacy': {
       id: '/privacy'
       path: '/privacy'
@@ -333,6 +386,13 @@ declare module '@tanstack/react-router' {
       path: '/solutions'
       fullPath: '/solutions'
       preLoaderRoute: typeof SolutionsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/strategy': {
+      id: '/strategy'
+      path: '/strategy'
+      fullPath: '/strategy'
+      preLoaderRoute: typeof StrategyRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/terms': {
@@ -420,10 +480,13 @@ const rootRouteChildren: RootRouteChildren = {
   AboutRoute: AboutRoute,
   ContactRoute: ContactRoute,
   CookiesRoute: CookiesRoute,
+  DiagnosisRoute: DiagnosisRoute,
   EnterpriseRoute: EnterpriseRoute,
   JiraVsPlaneRoute: JiraVsPlaneRoute,
+  MethodRoute: MethodRoute,
   PrivacyRoute: PrivacyRoute,
   SolutionsRoute: SolutionsRoute,
+  StrategyRoute: StrategyRoute,
   TermsRoute: TermsRoute,
   BlogSlugRoute: BlogSlugRoute,
   ExpertsLovableRoute: ExpertsLovableRoute,
