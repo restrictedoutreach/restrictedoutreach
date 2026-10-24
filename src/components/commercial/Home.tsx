@@ -32,11 +32,21 @@ export default function CommercialHome() {
               "STRATEGY + DEVELOPMENT",
             )}
           </div>
-          <h1 className="mt-8 font-medium text-4xl sm:text-6xl leading-[1.05] max-w-3xl">
-            RESTRICTED
-            <br />
-            OUTREACH<span className="text-primary">.</span>
-          </h1>
+          <div className="mt-8 flex flex-col items-start gap-5 sm:flex-row sm:items-center sm:gap-6">
+            <img
+              src="/favicon.png"
+              width={112}
+              height={112}
+              alt=""
+              aria-hidden="true"
+              className="h-16 w-16 shrink-0 object-contain sm:h-28 sm:w-28"
+            />
+            <h1 className="font-medium text-4xl sm:text-6xl leading-[1.05] max-w-3xl">
+              RESTRICTED
+              <br />
+              OUTREACH<span className="text-primary">.</span>
+            </h1>
+          </div>
           <h2 className="mt-6 text-2xl sm:text-3xl font-normal max-w-xl leading-tight">
             {c(
               "Estrategia y desarrollo de IA",
