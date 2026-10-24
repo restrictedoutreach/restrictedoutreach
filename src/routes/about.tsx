@@ -1,12 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { commercialHead } from "@/lib/commercial";
+import { localizedHead } from "@/lib/localized-seo";
 import Offering from "@/components/commercial/Offering";
 export const Route = createFileRoute("/about")({
-  head: () =>
-    commercialHead(
-      "Nuestra consultoría de IA",
-      "Conectamos estrategia y desarrollo para convertir la IA en capacidad de negocio.",
-      "/about",
-    ),
+  head: () => localizedHead("/about", "en"),
   component: () => <Offering kind="about" />,
 });

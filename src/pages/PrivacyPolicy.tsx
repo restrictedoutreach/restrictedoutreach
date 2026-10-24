@@ -1,11 +1,9 @@
 import Layout from "@/components/layout/Layout";
-import SEO from "@/components/SEO";
 import { motion } from "framer-motion";
 
 export default function PrivacyPolicy() {
   return (
     <Layout>
-      <SEO title="Privacy Policy" description="RESTRICTED OUTREACH privacy policy. Learn how we collect, use, and protect your personal data in compliance with GDPR and Spanish data protection laws." canonical="/privacy" noindex={false} />
       <section className="py-20">
         <div className="container max-w-4xl">
           <motion.div

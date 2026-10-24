@@ -3,11 +3,6 @@ import { createFileRoute } from "@tanstack/react-router";
 import PrivacyPolicy from "@/pages/PrivacyPolicy";
 
 export const Route = createFileRoute("/privacy")({
-  head: () =>
-    commercialHead(
-      "Política de privacidad",
-      "Tratamiento de datos personales y derechos de privacidad.",
-      "/privacy",
-    ),
+  head: () => commercialHead("Privacy policy", "How RESTRICTED OUTREACH processes personal data and protects your privacy rights.", "/privacy"),
   component: PrivacyPolicy,
 });
