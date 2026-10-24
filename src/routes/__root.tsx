@@ -1,6 +1,7 @@
 import { useEffect, useMemo } from "react";
 import { createInstance } from "i18next";
 import { I18nextProvider } from "react-i18next";
+import { ThemeProvider } from "next-themes";
 import {
   createRootRouteWithContext,
   HeadContent,
@@ -171,6 +172,7 @@ function RootComponent() {
 
   return (
     <QueryClientProvider client={queryClient}>
+      <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false} storageKey="restricted-outreach-theme" disableTransitionOnChange>
       <I18nextProvider i18n={translation}>
       <TooltipProvider>
         <Toaster />
@@ -180,6 +182,7 @@ function RootComponent() {
         <Chatbot />
       </TooltipProvider>
       </I18nextProvider>
+      </ThemeProvider>
     </QueryClientProvider>
   );
 }

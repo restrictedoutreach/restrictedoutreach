@@ -5,6 +5,7 @@ import { basePath } from "@/lib/localized-seo";
 import { Menu, X, ArrowUpRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import LanguageSelector from "@/components/LanguageSelector";
+import ThemeToggle from "@/components/ThemeToggle";
 import brand from "@/assets/restricted-outreach-brand.png";
 import { useCommercial } from "@/lib/commercial";
 export default function Header() {
@@ -26,12 +27,12 @@ export default function Header() {
   ];
   return (
     <header className="sticky top-0 z-40 border-b border-border bg-background/95 backdrop-blur">
-      <div className="commercial-container flex h-20 items-center justify-between gap-5">
+      <div className="commercial-container flex h-20 items-center justify-between gap-2 lg:gap-5">
         <Link to="/" aria-label="RESTRICTED OUTREACH">
           <img
             src={brand}
             alt="RESTRICTED OUTREACH"
-            className="h-7 sm:h-9 w-auto max-w-[185px] object-contain"
+            className="brand-wordmark h-7 sm:h-9 w-auto max-w-[140px] sm:max-w-[185px] object-contain"
           />
         </Link>
         <nav
@@ -57,7 +58,8 @@ export default function Header() {
             </Button>
           ))}
         </nav>
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-1 sm:gap-2">
+          <ThemeToggle />
           <LanguageSelector />
           <Button asChild className="hidden sm:flex h-10 rounded-md">
             <Link to="/diagnosis">
