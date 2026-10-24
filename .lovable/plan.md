@@ -1,222 +1,143 @@
+# RESTRICTED OUTREACH — Propuesta de rediseño y captación B2B
 
+## 1. Dirección estratégica
 
-# PALANTIR-CODE Website Development Plan
+**De una web de herramientas a una firma que convierte la IA en capacidad de negocio.**
 
-## Overview
+Dos verticales complementarios, no dos negocios desconectados:
+- **Estrategia:** decidir dónde invertir, implantar IA a gran escala y conseguir que los equipos la adopten.
+- **Desarrollo:** construir las aplicaciones, integraciones y agentes que hacen posible esa estrategia, con Lovable y Claude.
 
-Create a professional B2B website for PALANTIR-CODE, Spain's first certified Plane partner. The website will follow a similar structure to quabusolutions.com but focused entirely on Plane (plane.so) services and solutions instead of Atlassian.
+El mensaje principal debe vender resultados y acompañamiento; las tecnologías explican cómo los conseguimos, no sustituyen la propuesta de valor.
 
-## Brand Assets
+**Propuesta de valor sugerida:**
+> Ayudamos a las empresas a convertir la IA en resultados operativos: definimos la estrategia, desarrollamos las soluciones y acompañamos su adopción y escalado.
 
-- **Square Logo**: Blue crystal ball/sphere icon (will be copied to src/assets)
-- **Brand Mark**: "PALANTIR-CODE" text with blue underline (will be copied to src/assets)
-- **Color Palette**: Blue-focused (#0066B3 primary) to align with both the logo and Plane's branding
-- **Language**: English throughout
+Público prioritario: dirección general, operaciones y responsables de transformación en empresas B2B e industriales. El vertical Desarrollo también atiende a responsables de producto y tecnología con un proyecto concreto.
 
----
+## 2. Propuesta para la portada
 
-## Website Structure
+**Título:** RESTRICTED OUTREACH
 
-### 1. Navigation Header (Sticky)
+**Mensaje destacado:** Estrategia y desarrollo de IA para tu empresa.
 
-- Logo (square icon + brand name)
-- Menu Items:
-  - Solutions (dropdown)
-  - Services (dropdown)
-  - About
-  - Contact
-- CTA Button: "Schedule a Demo"
-- Partner Badge: "Official Plane Partner - Spain's First"
+**Texto de apoyo:**
+> Identificamos dónde la IA puede aportar valor, construimos aplicaciones y agentes adaptados a tus procesos y acompañamos a tu equipo desde el primer piloto hasta el despliegue a escala.
 
-### 2. Hero Section
+**Acción principal:** «Solicitar diagnóstico».
+**Acción secundaria:** «Hablemos de tu proyecto».
 
-**Headline**: "Accelerate Your Projects with Plane"
+Orden de contenidos:
+1. Marca, propuesta de valor y acceso inmediato a una conversación comercial.
+2. Problemas reconocibles: trabajo manual, información dispersa, pilotos que no se adoptan y herramientas desconectadas.
+3. Dos vías de entrada: **Estrategia IA** y **Desarrollo de soluciones**. Qué resuelven, qué recibe el cliente y siguiente paso.
+4. Ejemplos visuales de antes/después: partes de trabajo hacia el ERP, documentación hacia datos validados, solicitudes hacia flujos coordinados por agentes.
+5. Método 3A: Auditoría de Fricción → Arquitectura Invisible → Adopción Acompañada.
+6. De un proceso a toda la organización: piloto, evaluación, despliegue progresivo y mejora continua.
+7. Prueba de confianza: equipo y experiencia comprobable; casos reales únicamente si existen datos y permiso para publicarlos.
+8. Cierre con formulario breve, orientado al problema del cliente.
 
-**Subheadline**: "PALANTIR-CODE is Spain's first certified Plane partner. We help teams ship faster with expert implementation, migration, and custom solutions for Plane's unified workspace."
+Los ejemplos se identificarán como casos de uso ilustrativos, nunca como resultados de clientes inexistentes.
 
-**CTAs**:
-- "Explore Solutions" (primary)
-- "Schedule a Demo" (secondary)
-- "Talk to an Expert" (tertiary)
+## 3. Vertical Estrategia — IA a escala
 
-**Trust Indicator**: Plane Partner badge prominently displayed
+**Promesa comercial:** «Una hoja de ruta para llevar la IA del experimento a la operación».
 
-### 3. Stats Section
+Contenido propuesto:
+- Diagnóstico de procesos, preparación de datos y barreras de adopción.
+- Priorización por impacto, esfuerzo y riesgo; selección de un primer caso de uso.
+- Hoja de ruta de implantación con responsables, inversión y criterios de éxito.
+- Gobierno de IA: usos permitidos, protección de información, revisión humana y control de riesgos.
+- Gestión del cambio, formación y acompañamiento a usuarios.
+- Escalado entre departamentos mediante patrones reutilizables y seguimiento de resultados.
 
-Key metrics to build credibility:
-- "First Partner in Spain"
-- "100% Plane Certified"
-- "Enterprise Ready"
-- "24/7 Support"
+**Entregables:** mapa de oportunidades, cartera priorizada, hoja de ruta y plan de adopción y medición.
+**Acción:** «Solicitar diagnóstico de IA».
 
-### 4. Why Plane Section
+El taller de dos horas es la puerta de entrada, no toda la propuesta de estrategia a gran escala.
 
-Showcase Plane's core value propositions:
-- **Projects**: Customizable workflows, dependency tracking, flexible boards
-- **Wiki**: Built-in documentation, rich text editor, publishable pages
-- **AI**: Automate routine tasks, insights across projects
-- **Deployment**: Cloud, Self-hosted, or Airgapped options
+## 4. Vertical Desarrollo — Lovable y agentes con Claude
 
-### 5. Solutions/Accelerators Section
+**Promesa comercial:** «Aplicaciones y agentes conectados a tu negocio».
 
-Pre-built solutions adapted for Plane:
+Dos especialidades dentro del mismo vertical:
+- **Desarrollo con Lovable:** aplicaciones empresariales, portales, herramientas internas y MVPs; desde la definición funcional hasta pruebas, integraciones y puesta en marcha.
+- **Desarrollo agéntico con Claude:** asistentes y agentes que procesan información y coordinan tareas mediante herramientas, con permisos delimitados, trazabilidad y aprobación humana en acciones sensibles.
 
-| Solution | Description |
-|----------|-------------|
-| Marketing | Campaign management, content calendars in Plane |
-| Sales | Sales pipelines, CRM workflows, deal tracking |
-| HR & People | Onboarding workflows, performance reviews |
-| Operations | Process automation, resource management |
-| Finance | Budget approvals, expense tracking workflows |
-| IT & DevOps | Incident management, service desk |
-| Customer Service | Support ticketing, SLA management |
-| R&D | Product development, innovation tracking |
+La web debe explicar lo que recibe el cliente: solución funcional, integraciones, validación, documentación y acompañamiento. El término “vibe coding” puede aparecer en contenido especializado, pero no liderará el mensaje comercial.
 
-### 6. Services Section
+**Acción:** «Cuéntanos qué necesitas desarrollar».
 
-Expert consulting services:
+No prometer autonomía sin control, ausencia de errores ni aplicaciones listas para producción sin revisión. Lovable y Claude se presentarán como tecnologías de trabajo; no se afirmará ninguna certificación o alianza no acreditada.
 
-**Migration Services**
-- Migrate from Jira, Linear, ClickUp, or Asana
-- Zero data loss guaranteed
-- User training included
-- Post-migration support
+## 5. Estructura de páginas y navegación
 
-**Implementation & Configuration**
-- Best practices setup
-- Custom workflow design
-- Governance frameworks
-- Performance optimization
+**Menú:** Estrategia IA · Desarrollo · Método 3A · Nosotros · Contacto.
+**Botón destacado:** Solicitar diagnóstico.
 
-**Custom Development**
-- API integrations
-- Custom automations
-- Third-party connectors
-- Workflow extensions
+| Página | Función comercial |
+|---|---|
+| Inicio | Comprender la oferta y elegir uno de los dos verticales |
+| Estrategia IA | Captar empresas que necesitan priorizar, implantar y escalar |
+| Desarrollo | Captar proyectos concretos con Lovable o agentes con Claude |
+| Método 3A | Mostrar cómo se reduce la fricción y se acompaña la adopción |
+| Diagnóstico | Explicar el taller de dos horas, sus entregables y recoger solicitudes |
+| Nosotros | Presentar equipo, enfoque y experiencia verificable |
+| Contacto | Solicitud breve con contexto y vertical de interés |
 
-**Managed Services**
-- 24/7 monitoring
-- Proactive maintenance
-- User support
-- Regular health checks
+Mantener privacidad, cookies y términos. Revisar el blog: adaptar contenido útil al nuevo posicionamiento y retirar o redirigir contenido exclusivo de Plane/OutSystems según su relevancia. Los casos reales podrán incorporarse más adelante sin publicar una sección vacía.
 
-### 7. Why PALANTIR-CODE Section
+## 6. Captación: una conversación fácil de iniciar
 
-- Spain's First Certified Plane Partner
-- Deep expertise in project management tools
-- Bilingual support (English/Spanish)
-- Enterprise-grade security compliance (SOC 2, GDPR, ISO27001)
+**Recorrido Estrategia:** visita → solicitud → conversación de encaje → taller de diagnóstico → propuesta de piloto → escalado.
 
-### 8. Trusted By / Clients Section
+**Recorrido Desarrollo:** visita → descripción del proyecto → conversación de alcance → propuesta de desarrollo. No obligar a comprar un taller a quien ya tiene una necesidad bien definida.
 
-Logo wall with placeholder for client logos (can be populated later)
+Formulario inicial: nombre, email profesional, empresa, interés (Estrategia / Desarrollo / Ambos) y reto o proyecto. Consentimiento de privacidad claro; sin teléfono obligatorio ni suscripción comercial automática. Envío con contexto del vertical y confirmación de recepción, sin afirmar que hay una cita reservada.
 
-### 9. CTA Section
+Medir solicitudes por vertical y origen, envíos completados y oportunidades cualificadas. Los objetivos de respuesta y cierre de los documentos son metas internas, no cifras de éxito para publicar.
 
-"Ready to Transform Your Project Management?"
+**Oferta piloto documentada:** 30 días, un proceso concreto, 3.500 €, soporte opcional de 450 €/mes y pagos 50/50. Propongo no mostrar tarifas en la portada ni convertirlas en precio universal de Estrategia o Desarrollo; utilizarlas en la propuesta tras el diagnóstico. No anunciar “gratis” ni añadir condiciones fiscales que no figuran en los documentos.
 
-- Schedule a Demo button
-- Contact form link
+## 7. Dirección visual propuesta
 
-### 10. Footer
+**Consultoría tecnológica de alto contraste, con más claridad comercial y menos protagonismo de las herramientas.**
 
-- Company info
-- Quick links (Solutions, Services, About, Contact)
-- Social media links
-- Legal (Privacy Policy, Terms of Service)
-- "Official Plane Partner" badge
+- Marca RESTRICTED OUTREACH visible desde la primera pantalla, con sus logos actuales.
+- Evolución de la identidad existente: fondo negro, texto claro, magenta para acciones y cian para señales secundarias.
+- Tipografía legible, titulares precisos, bloques compactos y jerarquía clara.
+- Separar visualmente los dos verticales sin crear dos marcas distintas.
+- Imágenes de procesos, personas y pantallas de soluciones; evitar imágenes genéricas de robots y cerebros.
+- Mantener los efectos de marca actuales con intensidad contenida y sin perjudicar lectura, carga o movimiento reducido.
+- Diagramas simples del antes/después y del paso de piloto a escala, no catálogos de logos ni paneles recargados.
 
----
+## 8. Criterios editoriales y revisión de la documentación
 
-## Pages to Create
+- La documentación es especialmente sólida para adopción operativa; ampliar ese punto de partida a estrategia empresarial y desarrollo, sin reducir la firma a automatización industrial.
+- El manual 3A describe seis semanas y la oferta piloto treinta días: presentar la metodología y el piloto como alcances distintos.
+- Medir ahorro de horas, errores y adopción frente a una situación inicial. No prometer ROI garantizado a treinta días.
+- No publicar “el 80 % de proyectos falla” sin una fuente fiable, ni “curva de aprendizaje cero” o “cero interrupciones” como garantías.
+- Retirar métricas, certificaciones y testimonios vinculados a Plane; reutilizar experiencia solo si también acredita la nueva oferta.
+- Mantener ES/CA/EN y las preferencias de idioma existentes; redactar primero la propuesta comercial en español y adaptar después.
 
-| Page | Description |
-|------|-------------|
-| `/` | Home page (main landing) |
-| `/solutions` | Overview of all solutions |
-| `/services` | Detailed services page |
-| `/about` | Company information |
-| `/contact` | Contact form with demo scheduling |
+## 9. Alcance técnico de la implementación posterior
 
----
+- Conservar TanStack Start y el HTML generado en servidor; no volver a una web exclusivamente renderizada en el navegador.
+- Rediseñar páginas, cabecera, pie, textos, traducciones y material visual alrededor de los dos verticales.
+- Eliminar Plane y OutSystems de navegación, páginas activas, metadatos, datos estructurados, recursos de indexación y conocimiento del chat.
+- Mapear URLs antiguas a destinos realmente equivalentes mediante redirecciones permanentes. Sin equivalente, retirar con respuesta apropiada; no enviar todas las URLs a Inicio.
+- Revisar títulos, descripciones y etiquetas sociales únicas por página, canonical, sitemap y llms.txt en el dominio actual.
+- Conservar el envío de consultas y los controles de seguridad existentes; adaptar solo el contenido y los campos comerciales necesarios.
+- Comprobar navegación, idiomas, envío de una consulta y su recepción, legibilidad, accesibilidad y contenido servido a buscadores.
+- Hay un aviso previo de incompatibilidad en la pantalla de error general; se resolverá al comenzar la implementación, antes de validar la nueva web.
 
-## Technical Implementation
+## 10. Secuencia de trabajo
 
-### File Structure
+1. Aprobar propuesta de valor, estructura y dirección visual.
+2. Redactar portada y páginas de los dos verticales.
+3. Implementar identidad visual, navegación y páginas comerciales.
+4. Adaptar diagnóstico, contacto, traducciones y chat.
+5. Retirar contenidos antiguos con el tratamiento SEO correspondiente.
+6. Validar experiencia y solicitudes; presentar la web para revisión antes de publicar.
 
-```text
-src/
-├── assets/
-│   ├── palantir-logo-square.png
-│   └── palantir-brand.png
-├── components/
-│   ├── layout/
-│   │   ├── Header.tsx
-│   │   ├── Footer.tsx
-│   │   └── Layout.tsx
-│   ├── home/
-│   │   ├── Hero.tsx
-│   │   ├── Stats.tsx
-│   │   ├── WhyPlane.tsx
-│   │   ├── Solutions.tsx
-│   │   ├── Services.tsx
-│   │   ├── WhyUs.tsx
-│   │   ├── TrustedBy.tsx
-│   │   └── CTASection.tsx
-│   └── ui/ (existing components)
-├── pages/
-│   ├── Index.tsx (Home)
-│   ├── Solutions.tsx
-│   ├── Services.tsx
-│   ├── About.tsx
-│   └── Contact.tsx
-└── lib/
-    └── constants.ts (company info, navigation data)
-```
-
-### Design System Updates
-
-Update `index.css` with PALANTIR-CODE brand colors:
-- Primary Blue: #0066B3 (matching logo)
-- Secondary: Light blue accents
-- Neutral backgrounds with white space
-
-### Components to Build
-
-1. **Header**: Sticky navigation with dropdown menus and mobile hamburger
-2. **Hero**: Large headline, animated elements, CTAs
-3. **Stats**: Animated counters or static badges
-4. **Feature Cards**: Reusable cards for solutions/services
-5. **Service Cards**: Detailed service descriptions with bullet points
-6. **CTA Sections**: Call-to-action banners
-7. **Footer**: Multi-column layout with links
-
-### Animations & Polish
-
-- Smooth scroll behavior
-- Subtle hover effects on cards
-- Fade-in animations on scroll (using CSS or simple intersection observer)
-- Responsive design for all breakpoints
-
----
-
-## Content Summary (English)
-
-All text content will be in English, positioning PALANTIR-CODE as:
-- Spain's first and only certified Plane partner
-- Expert in Plane implementation and migration
-- Specialist in enterprise project management solutions
-- Trusted advisor for teams moving from Jira, Linear, or other tools to Plane
-
----
-
-## Implementation Order
-
-1. Copy brand assets to project
-2. Update design system with brand colors
-3. Create layout components (Header, Footer)
-4. Build Home page sections (Hero through CTA)
-5. Create additional pages (Solutions, Services, About, Contact)
-6. Add routing configuration
-7. Polish with animations and responsive adjustments
-
+**Esta entrega es la propuesta. La web actual todavía no se modifica ni se publica.**
