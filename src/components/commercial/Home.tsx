@@ -4,6 +4,7 @@ import Layout from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
 import { useCommercial } from "@/lib/commercial";
 import hero from "@/assets/human-agent-collaboration.jpg";
+import titleWordmark from "@/assets/restricted-outreach-title.png";
 import { Action, Closing, Verticals, MethodSteps, Flow } from "./Shared";
 export default function CommercialHome() {
   const c = useCommercial();
@@ -41,10 +42,16 @@ export default function CommercialHome() {
               aria-hidden="true"
               className="h-16 w-16 shrink-0 object-contain sm:h-28 sm:w-28"
             />
-            <h1 className="font-medium text-4xl sm:text-6xl leading-[1.05] max-w-3xl">
-              RESTRICTED
-              <br />
-              OUTREACH<span className="text-primary">.</span>
+            <h1 className="w-full max-w-[490px]">
+              <span className="sr-only">RESTRICTED OUTREACH</span>
+              <img
+                src={titleWordmark}
+                width={490}
+                height={94}
+                alt=""
+                aria-hidden="true"
+                className="block h-auto w-full"
+              />
             </h1>
           </div>
           <h2 className="mt-6 text-2xl sm:text-3xl font-normal max-w-xl leading-tight">
