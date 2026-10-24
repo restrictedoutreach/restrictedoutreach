@@ -1,5 +1,5 @@
 import { useTranslation } from "react-i18next";
-import { Globe } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const languages = [
   { code: "en", label: "EN" },
@@ -18,17 +18,20 @@ const LanguageSelector = () => {
   return (
     <div className="flex items-center gap-1 rounded-full border border-border bg-muted/50 p-0.5">
       {languages.map((lang) => (
-        <button
+        <Button
+          variant="ghost"
+          size="sm"
+          aria-pressed={i18n.language === lang.code}
           key={lang.code}
           onClick={() => changeLanguage(lang.code)}
-          className={`rounded-full px-2.5 py-1 text-xs font-medium transition-all ${
+          className={`h-7 rounded-md px-2.5 py-1 text-xs font-medium transition-all ${
             i18n.language === lang.code
               ? "bg-primary text-primary-foreground"
               : "text-muted-foreground hover:text-foreground"
           }`}
         >
           {lang.label}
-        </button>
+        </Button>
       ))}
     </div>
   );

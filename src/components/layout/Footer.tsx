@@ -1,6 +1,76 @@
-import {Link} from '@tanstack/react-router';
-import {Linkedin,Mail,ArrowUpRight} from 'lucide-react';
-import brand from '@/assets/restricted-outreach-brand.png';
-import {COMPANY} from '@/lib/constants';
-import {useCommercial} from '@/lib/commercial';
-export default function Footer(){const c=useCommercial();return <footer className="py-12"><div className="commercial-container"><div className="grid gap-10 md:grid-cols-3"><div><Link to="/"><img src={brand} alt="RESTRICTED OUTREACH" className="h-9 object-contain"/></Link><p className="mt-5 text-sm text-muted-foreground max-w-xs">{c('Estrategia y desarrollo de IA. De la oportunidad al impacto real.','Estratègia i desenvolupament d’IA. De l’oportunitat a l’impacte real.','AI strategy and development. From opportunity to real impact.')}</p></div><div className="flex flex-col gap-3 text-sm"><Link to="/strategy">{c('Estrategia IA','Estratègia IA','AI strategy')}</Link><Link to="/services/development">{c('Desarrollo con Lovable y Claude','Desenvolupament amb Lovable i Claude','Development with Lovable and Claude')}</Link><Link to="/method">{c('Método 3A','Mètode 3A','3A method')}</Link><Link to="/about">{c('Nosotros','Nosaltres','About')}</Link></div><div className="space-y-4 text-sm text-muted-foreground"><a className="flex items-center gap-2 break-all" href={`mailto:${COMPANY.email}`}><Mail className="h-4 w-4 shrink-0 text-accent"/>{COMPANY.email}</a><p>{COMPANY.address}</p><a href="https://www.linkedin.com/company/restricted-outreach" target="_blank" rel="noopener noreferrer" className="flex gap-2 items-center"><Linkedin className="h-4 w-4"/>LinkedIn<ArrowUpRight className="h-3 w-3"/></a></div></div><div className="mt-10 border-t border-border pt-6 flex flex-col sm:flex-row justify-between gap-4 text-xs text-muted-foreground"><p>© 2026 RESTRICTED OUTREACH</p><div className="flex flex-wrap gap-5"><Link to="/privacy">{c('Privacidad','Privacitat','Privacy')}</Link><Link to="/terms">{c('Términos','Termes','Terms')}</Link><Link to="/cookies">Cookies</Link></div></div></div></footer>}
+import { Link } from "@tanstack/react-router";
+import { Linkedin, Mail, ArrowUpRight } from "lucide-react";
+import brand from "@/assets/restricted-outreach-brand.png";
+import { COMPANY } from "@/lib/constants";
+import { useCommercial } from "@/lib/commercial";
+export default function Footer() {
+  const c = useCommercial();
+  return (
+    <footer className="py-12">
+      <div className="commercial-container">
+        <div className="grid gap-10 md:grid-cols-3">
+          <div>
+            <Link to="/">
+              <img
+                src={brand}
+                alt="RESTRICTED OUTREACH"
+                className="h-9 object-contain"
+              />
+            </Link>
+            <p className="mt-5 text-sm text-muted-foreground max-w-xs">
+              {c(
+                "Estrategia y desarrollo de IA. De la oportunidad al impacto real.",
+                "Estratègia i desenvolupament d’IA. De l’oportunitat a l’impacte real.",
+                "AI strategy and development. From opportunity to real impact.",
+              )}
+            </p>
+          </div>
+          <div className="flex flex-col gap-3 text-sm">
+            <Link to="/strategy">
+              {c("Estrategia IA", "Estratègia IA", "AI strategy")}
+            </Link>
+            <Link to="/services/development">
+              {c(
+                "Desarrollo con Lovable y Claude",
+                "Desenvolupament amb Lovable i Claude",
+                "Development with Lovable and Claude",
+              )}
+            </Link>
+            <Link to="/method">{c("Método 3A", "Mètode 3A", "3A method")}</Link>
+            <Link to="/about">{c("Nosotros", "Nosaltres", "About")}</Link>
+          </div>
+          <div className="space-y-4 text-sm text-muted-foreground">
+            <a
+              className="flex items-center gap-2 break-all"
+              href={`mailto:${COMPANY.email}`}
+            >
+              <Mail className="h-4 w-4 shrink-0 text-accent" />
+              {COMPANY.email}
+            </a>
+            <p>{COMPANY.address}</p>
+            <a
+              href="https://www.linkedin.com/company/restricted-outreach"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex gap-2 items-center"
+            >
+              <Linkedin className="h-4 w-4" />
+              LinkedIn
+              <ArrowUpRight className="h-3 w-3" />
+            </a>
+          </div>
+        </div>
+        <div className="mt-10 border-t border-border pt-6 flex flex-col sm:flex-row justify-between gap-4 text-xs text-muted-foreground">
+          <p>© 2026 RESTRICTED OUTREACH</p>
+          <div className="flex flex-wrap gap-5">
+            <Link to="/privacy">
+              {c("Privacidad", "Privacitat", "Privacy")}
+            </Link>
+            <Link to="/terms">{c("Términos", "Termes", "Terms")}</Link>
+            <Link to="/cookies">Cookies</Link>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
+}

@@ -1,2 +1,6 @@
-import {createFileRoute,redirect} from '@tanstack/react-router';
-export const Route=createFileRoute('/solutions')({beforeLoad:()=>{throw redirect({to:'/services',statusCode:301})}});
+import { createFileRoute, redirect } from "@tanstack/react-router";
+export const Route = createFileRoute("/solutions")({
+  beforeLoad: () => {
+    throw redirect({ to: "/services", statusCode: 301 });
+  },
+});
