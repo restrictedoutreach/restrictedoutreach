@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { useCommercial } from "@/lib/commercial";
 import hero from "@/assets/human-agent-collaboration.jpg";
 import titleWordmark from "@/assets/restricted-outreach-title.png";
+import HeroMatrix from "@/components/animations/HeroMatrix";
 import { Action, Closing, Verticals, MethodSteps, Flow } from "./Shared";
 export default function CommercialHome() {
   const c = useCommercial();
@@ -23,6 +24,7 @@ export default function CommercialHome() {
           className="cinematic-image absolute inset-0 h-full w-full object-cover"
         />
         <div className="hero-shade absolute inset-0" />
+        <HeroMatrix />
         <div className="hero-signal" aria-hidden="true" />
         <div className="commercial-container relative z-10 py-12 lg:py-16">
           <div className="flex items-center gap-3 eyebrow text-accent">

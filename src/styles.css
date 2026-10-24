@@ -378,6 +378,39 @@ body {
 .hero-shade {
   background: var(--hero-shade);
 }
+.hero-matrix {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  grid-template-columns: repeat(24, minmax(0, 1fr));
+  overflow: hidden;
+  pointer-events: none;
+  opacity: .32;
+  color: var(--accent);
+  mask-image: linear-gradient(90deg, transparent, transparent 28%, currentColor 62%);
+}
+.hero-matrix-stream {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font: 14px/1.5 monospace;
+  height: max-content;
+  animation: matrix-fall 16s linear infinite;
+  animation-delay: -9s;
+}
+.hero-matrix-stream:nth-child(3n) { animation-duration: 21s; animation-delay: -16s; color: var(--primary); }
+.hero-matrix-stream:nth-child(3n + 1) { animation-duration: 13s; animation-delay: -5s; }
+.hero-matrix-stream:nth-child(4n) { animation-delay: -11s; }
+.hero-matrix-stream > span { opacity: .45; }
+.hero-matrix-stream > span:nth-child(n + 12) { opacity: .7; }
+.hero-matrix-stream > span:last-child { opacity: 1; color: var(--foreground); }
+@keyframes matrix-fall {
+  from { transform: translateY(-100%); }
+  to { transform: translateY(700px); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero-matrix { display: none; }
+}
 .eyebrow {
   font-size: 11px;
   font-weight: 600;
