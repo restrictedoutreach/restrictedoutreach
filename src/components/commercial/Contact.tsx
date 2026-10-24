@@ -15,6 +15,7 @@ import {
 } from "@/components/ui/select";
 import { useCommercial } from "@/lib/commercial";
 import { COMPANY } from "@/lib/constants";
+import HeroMatrix from "@/components/animations/HeroMatrix";
 export default function CommercialContact() {
   const c = useCommercial();
   const [interest, setInterest] = useState("");
@@ -58,8 +59,9 @@ export default function CommercialContact() {
   }
   return (
     <Layout>
-      <section className="py-12 lg:py-16">
-        <div className="commercial-container">
+      <section className="relative overflow-hidden py-12 lg:py-16">
+        <HeroMatrix />
+        <div className="commercial-container relative z-10">
           <p className="eyebrow text-primary">
             {c("HABLEMOS", "PARLEM", "LET’S TALK")}
           </p>
